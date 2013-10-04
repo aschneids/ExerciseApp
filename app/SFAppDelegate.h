@@ -1,6 +1,6 @@
 @class SFAppDelegate;
 
-@interface ParseStarterProjectAppDelegate : NSObject <UIApplicationDelegate> {
+@interface SFAppDelegate : NSObject <UIApplicationDelegate> {
 
 }
 

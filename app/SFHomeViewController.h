@@ -1,3 +1,7 @@
-@interface ParseStarterProjectViewController : UIViewController
+
+
+
+
+@interface SFHomeViewController : UIViewController
 
 @end

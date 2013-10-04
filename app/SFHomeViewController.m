@@ -1,7 +1,7 @@
-#import "ParseStarterProjectViewController.h"
+#import "SFHomeViewController.h"
 #import <Parse/Parse.h>
 
-@implementation ParseStarterProjectViewController
+@implementation SFHomeViewController
 
 
 - (void)didReceiveMemoryWarning {

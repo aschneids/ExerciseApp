@@ -1,8 +1,8 @@
 #import <Parse/Parse.h>
-#import "ParseStarterProjectAppDelegate.h"
-#import "ParseStarterProjectViewController.h"
+#import "SFAppDelegate.h"
+#import "SFHomeViewController.h"
 
-@implementation ParseStarterProjectAppDelegate
+@implementation SFAppDelegate
 
 
 #pragma mark - UIApplicationDelegate
@@ -25,11 +25,6 @@
     [defaultACL setPublicReadAccess:YES];
     
     [PFACL setDefaultACL:defaultACL withAccessForCurrentUser:YES];
-    
-    // Override point for customization after application launch.
-     
-    self.window.rootViewController = self.viewController;
-    [self.window makeKeyAndVisible];
 
     [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
     [application registerForRemoteNotificationTypes:UIRemoteNotificationTypeBadge|
