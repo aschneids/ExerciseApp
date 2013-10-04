@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Stretch&amp;Flex Lite.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 		<key>Stretch&amp;Flex.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -13,6 +18,11 @@
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>09ABC06C13A1D52D009C3FCF</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>AB86FB0D17FF682000D9637E</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -28,6 +28,28 @@
 		AB86FB0617FF63B200D9637E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AB86FB0517FF63B200D9637E /* main.m */; };
 		AB86FB0917FF649100D9637E /* MainStoryBoard.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB86FB0717FF649100D9637E /* MainStoryBoard.xib */; };
 		AB86FB0C17FF649900D9637E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AB86FB0A17FF649900D9637E /* InfoPlist.strings */; };
+		AB86FB0F17FF682000D9637E /* SFAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AB86FAF717FF634B00D9637E /* SFAppDelegate.m */; };
+		AB86FB1017FF682000D9637E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AB86FB0517FF63B200D9637E /* main.m */; };
+		AB86FB1117FF682000D9637E /* SFHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB86FAF517FF634500D9637E /* SFHomeViewController.m */; };
+		AB86FB1317FF682000D9637E /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97E18B1E1624CB5700B17A67 /* CoreLocation.framework */; };
+		AB86FB1417FF682000D9637E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 743D7B6C157DA60100084B67 /* CoreGraphics.framework */; };
+		AB86FB1517FF682000D9637E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FCDD6AF14A573F500295AAC /* QuartzCore.framework */; };
+		AB86FB1617FF682000D9637E /* libz.1.1.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 099CCEAC13F9E3760039A464 /* libz.1.1.3.dylib */; };
+		AB86FB1717FF682000D9637E /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09BEF34B13D51C3F001BBCDB /* Security.framework */; };
+		AB86FB1817FF682000D9637E /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 095ACE8513C68EA300566243 /* AudioToolbox.framework */; };
+		AB86FB1917FF682000D9637E /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 092354B613A1D83C00DA740F /* MobileCoreServices.framework */; };
+		AB86FB1A17FF682000D9637E /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 092354B413A1D7F000DA740F /* SystemConfiguration.framework */; };
+		AB86FB1B17FF682000D9637E /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 092354B213A1D7EB00DA740F /* CFNetwork.framework */; };
+		AB86FB1C17FF682000D9637E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09ABC07113A1D52D009C3FCF /* UIKit.framework */; };
+		AB86FB1D17FF682000D9637E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09ABC07313A1D52D009C3FCF /* Foundation.framework */; };
+		AB86FB1E17FF682000D9637E /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 094AC9FF14367ACD008398F8 /* Parse.framework */; };
+		AB86FB2017FF682000D9637E /* Entitlements.plist in Resources */ = {isa = PBXBuildFile; fileRef = AB86FB0217FF639600D9637E /* Entitlements.plist */; };
+		AB86FB2117FF682000D9637E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AB86FB0A17FF649900D9637E /* InfoPlist.strings */; };
+		AB86FB2217FF682000D9637E /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AB86FAFC17FF638400D9637E /* Default@2x.png */; };
+		AB86FB2317FF682000D9637E /* MainStoryBoard.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB86FB0717FF649100D9637E /* MainStoryBoard.xib */; };
+		AB86FB2417FF682000D9637E /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = AB86FAFB17FF638400D9637E /* Default.png */; };
+		AB86FB2517FF682000D9637E /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AB86FAFA17FF638400D9637E /* Default-568h@2x.png */; };
+		AB86FB2617FF682000D9637E /* Stretch&Flex-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AB86FB0017FF638F00D9637E /* Stretch&Flex-Info.plist */; };
 		DD952FCB16E7F5CF00470144 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97E18B1E1624CB5700B17A67 /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
@@ -62,6 +84,8 @@
 		AB86FB0517FF63B200D9637E /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = app/main.m; sourceTree = SOURCE_ROOT; };
 		AB86FB0817FF649100D9637E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = app/en.lproj/MainStoryBoard.xib; sourceTree = SOURCE_ROOT; };
 		AB86FB0B17FF649900D9637E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = app/en.lproj/InfoPlist.strings; sourceTree = SOURCE_ROOT; };
+		AB86FB2A17FF682000D9637E /* Stretch&Flex copy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Stretch&Flex copy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AB86FB2B17FF682000D9637E /* Stretch&Flex Lite-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Stretch&Flex Lite-Info.plist"; path = "/Users/Ashley/Documents/Stretch&Flex/Stretch&Flex Lite-Info.plist"; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,13 +108,32 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		AB86FB1217FF682000D9637E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AB86FB1317FF682000D9637E /* CoreLocation.framework in Frameworks */,
+				AB86FB1417FF682000D9637E /* CoreGraphics.framework in Frameworks */,
+				AB86FB1517FF682000D9637E /* QuartzCore.framework in Frameworks */,
+				AB86FB1617FF682000D9637E /* libz.1.1.3.dylib in Frameworks */,
+				AB86FB1717FF682000D9637E /* Security.framework in Frameworks */,
+				AB86FB1817FF682000D9637E /* AudioToolbox.framework in Frameworks */,
+				AB86FB1917FF682000D9637E /* MobileCoreServices.framework in Frameworks */,
+				AB86FB1A17FF682000D9637E /* SystemConfiguration.framework in Frameworks */,
+				AB86FB1B17FF682000D9637E /* CFNetwork.framework in Frameworks */,
+				AB86FB1C17FF682000D9637E /* UIKit.framework in Frameworks */,
+				AB86FB1D17FF682000D9637E /* Foundation.framework in Frameworks */,
+				AB86FB1E17FF682000D9637E /* Parse.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		09ABC06213A1D52D009C3FCF = {
 			isa = PBXGroup;
 			children = (
-				09ABC07713A1D52D009C3FCF /* ParseStarterProject */,
+				09ABC07713A1D52D009C3FCF /* Stretch&Flex */,
 				09ABC07013A1D52D009C3FCF /* Frameworks */,
 				09ABC06E13A1D52D009C3FCF /* Products */,
 			);
@@ -100,6 +143,7 @@
 			isa = PBXGroup;
 			children = (
 				09ABC06D13A1D52D009C3FCF /* Stretch&Flex.app */,
+				AB86FB2A17FF682000D9637E /* Stretch&Flex copy.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -127,7 +171,7 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		09ABC07713A1D52D009C3FCF /* ParseStarterProject */ = {
+		09ABC07713A1D52D009C3FCF /* Stretch&Flex */ = {
 			isa = PBXGroup;
 			children = (
 				AB86FAF917FF635200D9637E /* SFAppDelegate.h */,
@@ -137,6 +181,7 @@
 				AB86FAF517FF634500D9637E /* SFHomeViewController.m */,
 				09ABC07813A1D52D009C3FCF /* Supporting Files */,
 			);
+			name = "Stretch&Flex";
 			path = ParseStarterProject;
 			sourceTree = "<group>";
 		};
@@ -147,6 +192,7 @@
 				AB86FAFB17FF638400D9637E /* Default.png */,
 				AB86FAFC17FF638400D9637E /* Default@2x.png */,
 				AB86FB0017FF638F00D9637E /* Stretch&Flex-Info.plist */,
+				AB86FB2B17FF682000D9637E /* Stretch&Flex Lite-Info.plist */,
 				AB86FB0217FF639600D9637E /* Entitlements.plist */,
 				AB86FB0A17FF649900D9637E /* InfoPlist.strings */,
 				AB86FB0417FF63A900D9637E /* Stretch&Flex-Prefix.pch */,
@@ -173,6 +219,23 @@
 			name = "Stretch&Flex";
 			productName = ParseStarterProject;
 			productReference = 09ABC06D13A1D52D009C3FCF /* Stretch&Flex.app */;
+			productType = "com.apple.product-type.application";
+		};
+		AB86FB0D17FF682000D9637E /* Stretch&Flex Lite */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AB86FB2717FF682000D9637E /* Build configuration list for PBXNativeTarget "Stretch&Flex Lite" */;
+			buildPhases = (
+				AB86FB0E17FF682000D9637E /* Sources */,
+				AB86FB1217FF682000D9637E /* Frameworks */,
+				AB86FB1F17FF682000D9637E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Stretch&Flex Lite";
+			productName = ParseStarterProject;
+			productReference = AB86FB2A17FF682000D9637E /* Stretch&Flex copy.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -206,6 +269,7 @@
 			projectRoot = "";
 			targets = (
 				09ABC06C13A1D52D009C3FCF /* Stretch&Flex */,
+				AB86FB0D17FF682000D9637E /* Stretch&Flex Lite */,
 			);
 		};
 /* End PBXProject section */
@@ -225,6 +289,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		AB86FB1F17FF682000D9637E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AB86FB2017FF682000D9637E /* Entitlements.plist in Resources */,
+				AB86FB2117FF682000D9637E /* InfoPlist.strings in Resources */,
+				AB86FB2217FF682000D9637E /* Default@2x.png in Resources */,
+				AB86FB2317FF682000D9637E /* MainStoryBoard.xib in Resources */,
+				AB86FB2417FF682000D9637E /* Default.png in Resources */,
+				AB86FB2517FF682000D9637E /* Default-568h@2x.png in Resources */,
+				AB86FB2617FF682000D9637E /* Stretch&Flex-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -235,6 +313,16 @@
 				AB86FAF817FF634B00D9637E /* SFAppDelegate.m in Sources */,
 				AB86FB0617FF63B200D9637E /* main.m in Sources */,
 				AB86FAF617FF634500D9637E /* SFHomeViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AB86FB0E17FF682000D9637E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AB86FB0F17FF682000D9637E /* SFAppDelegate.m in Sources */,
+				AB86FB1017FF682000D9637E /* main.m in Sources */,
+				AB86FB1117FF682000D9637E /* SFHomeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -342,6 +430,54 @@
 			};
 			name = Release;
 		};
+		AB86FB2817FF682000D9637E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "app/Stretch&Flex-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INFOPLIST_FILE = "$(SRCROOT)/Stretch&Flex Lite-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				PRODUCT_NAME = "Stretch&Flex copy";
+				PROVISIONING_PROFILE = "";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		AB86FB2917FF682000D9637E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "app/Stretch&Flex-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INFOPLIST_FILE = "$(SRCROOT)/Stretch&Flex Lite-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				PRODUCT_NAME = "Stretch&Flex copy";
+				PROVISIONING_PROFILE = "";
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -359,6 +495,15 @@
 			buildConfigurations = (
 				09ABC08F13A1D52E009C3FCF /* Debug */,
 				09ABC09013A1D52E009C3FCF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AB86FB2717FF682000D9637E /* Build configuration list for PBXNativeTarget "Stretch&Flex Lite" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AB86FB2817FF682000D9637E /* Debug */,
+				AB86FB2917FF682000D9637E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
