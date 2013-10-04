@@ -1,3 +1,11 @@
+//
+//  SFAppDelegate.m
+//  Stretch&Flex
+//
+//  Created by Ashley Schneider on 10/4/13.
+//  Copyright (c) 2013 Lunde. All rights reserved.
+//
+
 #import <Parse/Parse.h>
 #import "SFAppDelegate.h"
 #import "SFHomeViewController.h"
@@ -8,14 +16,8 @@
 #pragma mark - UIApplicationDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // ****************************************************************************
-    // Uncomment and fill in with your Parse credentials:
-    // [Parse setApplicationId:@"your_application_id" clientKey:@"your_client_key"];
-    //
-    // If you are using Facebook, uncomment and add your FacebookAppID to your bundle's plist as
-    // described here: https://developers.facebook.com/docs/getting-started/facebook-sdk-for-ios/
-    // [PFFacebookUtils initializeFacebook];
-    // ****************************************************************************
+    
+    [Parse setApplicationId:@"P3ssFWkmlU5DxbGldkDq6kYEHDy7JmA0KYoaqU2e" clientKey:@"kybJSNngeWOxr3Tfq4yRb7lqfifcw5svQzYG7fGf"];
 
     [PFUser enableAutomaticUser];
     
@@ -32,19 +34,6 @@
                                                     UIRemoteNotificationTypeSound];
     return YES;
 }
-
-/*
- 
-///////////////////////////////////////////////////////////
-// Uncomment this method if you are using Facebook
-///////////////////////////////////////////////////////////
- 
-- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url
-    sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
-    return [PFFacebookUtils handleOpenURL:url];
-} 
- 
-*/
 
 - (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)newDeviceToken {
     [PFPush storeDeviceToken:newDeviceToken];

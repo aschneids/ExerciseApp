@@ -26,7 +26,6 @@
 		AB86FB0117FF638F00D9637E /* Stretch&Flex-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AB86FB0017FF638F00D9637E /* Stretch&Flex-Info.plist */; };
 		AB86FB0317FF639600D9637E /* Entitlements.plist in Resources */ = {isa = PBXBuildFile; fileRef = AB86FB0217FF639600D9637E /* Entitlements.plist */; };
 		AB86FB0617FF63B200D9637E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AB86FB0517FF63B200D9637E /* main.m */; };
-		AB86FB0917FF649100D9637E /* MainStoryBoard.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB86FB0717FF649100D9637E /* MainStoryBoard.xib */; };
 		AB86FB0C17FF649900D9637E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AB86FB0A17FF649900D9637E /* InfoPlist.strings */; };
 		AB86FB0F17FF682000D9637E /* SFAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AB86FAF717FF634B00D9637E /* SFAppDelegate.m */; };
 		AB86FB1017FF682000D9637E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AB86FB0517FF63B200D9637E /* main.m */; };
@@ -46,10 +45,13 @@
 		AB86FB2017FF682000D9637E /* Entitlements.plist in Resources */ = {isa = PBXBuildFile; fileRef = AB86FB0217FF639600D9637E /* Entitlements.plist */; };
 		AB86FB2117FF682000D9637E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AB86FB0A17FF649900D9637E /* InfoPlist.strings */; };
 		AB86FB2217FF682000D9637E /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AB86FAFC17FF638400D9637E /* Default@2x.png */; };
-		AB86FB2317FF682000D9637E /* MainStoryBoard.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB86FB0717FF649100D9637E /* MainStoryBoard.xib */; };
 		AB86FB2417FF682000D9637E /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = AB86FAFB17FF638400D9637E /* Default.png */; };
 		AB86FB2517FF682000D9637E /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AB86FAFA17FF638400D9637E /* Default-568h@2x.png */; };
 		AB86FB2617FF682000D9637E /* Stretch&Flex-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AB86FB0017FF638F00D9637E /* Stretch&Flex-Info.plist */; };
+		AB86FB2D17FF6C0A00D9637E /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB86FB2C17FF6C0A00D9637E /* Storyboard.storyboard */; };
+		AB86FB2E17FF6C0A00D9637E /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB86FB2C17FF6C0A00D9637E /* Storyboard.storyboard */; };
+		AB86FB3517FF724700D9637E /* SFVideoListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB86FB3417FF724700D9637E /* SFVideoListViewController.m */; };
+		AB86FB3617FF724700D9637E /* SFVideoListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB86FB3417FF724700D9637E /* SFVideoListViewController.m */; };
 		DD952FCB16E7F5CF00470144 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97E18B1E1624CB5700B17A67 /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
@@ -82,10 +84,12 @@
 		AB86FB0217FF639600D9637E /* Entitlements.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Entitlements.plist; path = app/Entitlements.plist; sourceTree = SOURCE_ROOT; };
 		AB86FB0417FF63A900D9637E /* Stretch&Flex-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Stretch&Flex-Prefix.pch"; path = "app/Stretch&Flex-Prefix.pch"; sourceTree = SOURCE_ROOT; };
 		AB86FB0517FF63B200D9637E /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = app/main.m; sourceTree = SOURCE_ROOT; };
-		AB86FB0817FF649100D9637E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = app/en.lproj/MainStoryBoard.xib; sourceTree = SOURCE_ROOT; };
 		AB86FB0B17FF649900D9637E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = app/en.lproj/InfoPlist.strings; sourceTree = SOURCE_ROOT; };
 		AB86FB2A17FF682000D9637E /* Stretch&Flex copy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Stretch&Flex copy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB86FB2B17FF682000D9637E /* Stretch&Flex Lite-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Stretch&Flex Lite-Info.plist"; path = "/Users/Ashley/Documents/Stretch&Flex/Stretch&Flex Lite-Info.plist"; sourceTree = "<absolute>"; };
+		AB86FB2C17FF6C0A00D9637E /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = SOURCE_ROOT; };
+		AB86FB3317FF724700D9637E /* SFVideoListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFVideoListViewController.h; sourceTree = SOURCE_ROOT; };
+		AB86FB3417FF724700D9637E /* SFVideoListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFVideoListViewController.m; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,11 +178,13 @@
 		09ABC07713A1D52D009C3FCF /* Stretch&Flex */ = {
 			isa = PBXGroup;
 			children = (
+				AB86FB2C17FF6C0A00D9637E /* Storyboard.storyboard */,
 				AB86FAF917FF635200D9637E /* SFAppDelegate.h */,
 				AB86FAF717FF634B00D9637E /* SFAppDelegate.m */,
-				AB86FB0717FF649100D9637E /* MainStoryBoard.xib */,
 				AB86FAF417FF633300D9637E /* SFHomeViewController.h */,
 				AB86FAF517FF634500D9637E /* SFHomeViewController.m */,
+				AB86FB3317FF724700D9637E /* SFVideoListViewController.h */,
+				AB86FB3417FF724700D9637E /* SFVideoListViewController.m */,
 				09ABC07813A1D52D009C3FCF /* Supporting Files */,
 			);
 			name = "Stretch&Flex";
@@ -254,6 +260,9 @@
 							};
 						};
 					};
+					AB86FB0D17FF682000D9637E = {
+						DevelopmentTeam = L284HL7MYY;
+					};
 				};
 			};
 			buildConfigurationList = 09ABC06713A1D52D009C3FCF /* Build configuration list for PBXProject "Stretch&Flex" */;
@@ -282,8 +291,8 @@
 				AB86FB0317FF639600D9637E /* Entitlements.plist in Resources */,
 				AB86FB0C17FF649900D9637E /* InfoPlist.strings in Resources */,
 				AB86FAFF17FF638400D9637E /* Default@2x.png in Resources */,
-				AB86FB0917FF649100D9637E /* MainStoryBoard.xib in Resources */,
 				AB86FAFE17FF638400D9637E /* Default.png in Resources */,
+				AB86FB2D17FF6C0A00D9637E /* Storyboard.storyboard in Resources */,
 				AB86FAFD17FF638400D9637E /* Default-568h@2x.png in Resources */,
 				AB86FB0117FF638F00D9637E /* Stretch&Flex-Info.plist in Resources */,
 			);
@@ -296,8 +305,8 @@
 				AB86FB2017FF682000D9637E /* Entitlements.plist in Resources */,
 				AB86FB2117FF682000D9637E /* InfoPlist.strings in Resources */,
 				AB86FB2217FF682000D9637E /* Default@2x.png in Resources */,
-				AB86FB2317FF682000D9637E /* MainStoryBoard.xib in Resources */,
 				AB86FB2417FF682000D9637E /* Default.png in Resources */,
+				AB86FB2E17FF6C0A00D9637E /* Storyboard.storyboard in Resources */,
 				AB86FB2517FF682000D9637E /* Default-568h@2x.png in Resources */,
 				AB86FB2617FF682000D9637E /* Stretch&Flex-Info.plist in Resources */,
 			);
@@ -311,6 +320,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AB86FAF817FF634B00D9637E /* SFAppDelegate.m in Sources */,
+				AB86FB3517FF724700D9637E /* SFVideoListViewController.m in Sources */,
 				AB86FB0617FF63B200D9637E /* main.m in Sources */,
 				AB86FAF617FF634500D9637E /* SFHomeViewController.m in Sources */,
 			);
@@ -321,6 +331,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AB86FB0F17FF682000D9637E /* SFAppDelegate.m in Sources */,
+				AB86FB3617FF724700D9637E /* SFVideoListViewController.m in Sources */,
 				AB86FB1017FF682000D9637E /* main.m in Sources */,
 				AB86FB1117FF682000D9637E /* SFHomeViewController.m in Sources */,
 			);
@@ -329,14 +340,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		AB86FB0717FF649100D9637E /* MainStoryBoard.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				AB86FB0817FF649100D9637E /* en */,
-			);
-			name = MainStoryBoard.xib;
-			sourceTree = "<group>";
-		};
 		AB86FB0A17FF649900D9637E /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -435,7 +438,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Ashley Schneider (V4X92R923S)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -459,7 +462,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Ashley Schneider (V4X92R923S)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				FRAMEWORK_SEARCH_PATHS = (

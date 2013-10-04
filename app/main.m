@@ -1,4 +1,10 @@
-// Copyright 2011 Ping Labs, Inc. All rights reserved.
+//
+//  main.m
+//  Stretch&Flex
+//
+//  Created by Ashley Schneider on 10/4/13.
+//  Copyright (c) 2013 Lunde. All rights reserved.
+//
 
 #import <UIKit/UIKit.h>
 
