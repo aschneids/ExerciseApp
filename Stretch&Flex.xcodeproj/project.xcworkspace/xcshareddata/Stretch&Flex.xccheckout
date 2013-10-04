@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>D7FB016E-4177-4393-8FAE-45F33A84BDF2</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Stretch&amp;Flex</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>9DA03AA2-E4B7-4318-B64C-6EFF18965746</key>
+		<string>https://bitbucket.org/arschnei/stretch-flex.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Stretch&amp;Flex.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>9DA03AA2-E4B7-4318-B64C-6EFF18965746</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://bitbucket.org/arschnei/stretch-flex.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>9DA03AA2-E4B7-4318-B64C-6EFF18965746</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>9DA03AA2-E4B7-4318-B64C-6EFF18965746</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Stretch&amp;Flex</string>
+		</dict>
+	</array>
+</dict>
+</plist>
