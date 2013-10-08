@@ -52,6 +52,18 @@
 		AB86FB2E17FF6C0A00D9637E /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB86FB2C17FF6C0A00D9637E /* Storyboard.storyboard */; };
 		AB86FB3517FF724700D9637E /* SFVideoListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB86FB3417FF724700D9637E /* SFVideoListViewController.m */; };
 		AB86FB3617FF724700D9637E /* SFVideoListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB86FB3417FF724700D9637E /* SFVideoListViewController.m */; };
+		AB8CB96F18032D0C0068964B /* SFVideoListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8CB96E18032D0C0068964B /* SFVideoListCell.m */; };
+		AB8CB97018032D0C0068964B /* SFVideoListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8CB96E18032D0C0068964B /* SFVideoListCell.m */; };
+		AB8CB973180352940068964B /* Video.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8CB972180352940068964B /* Video.m */; };
+		AB8CB974180352940068964B /* Video.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8CB972180352940068964B /* Video.m */; };
+		AB8CB976180467A20068964B /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB8CB975180467A20068964B /* MediaPlayer.framework */; };
+		AB8CB977180467AB0068964B /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB8CB975180467A20068964B /* MediaPlayer.framework */; };
+		AB8CB97918046A680068964B /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB8CB97818046A680068964B /* AVFoundation.framework */; };
+		AB8CB97A18046A6E0068964B /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB8CB97818046A680068964B /* AVFoundation.framework */; };
+		AB8CB97C18046EA20068964B /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB8CB97B18046EA20068964B /* CoreMedia.framework */; };
+		AB8CB97D18046EA80068964B /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB8CB97B18046EA20068964B /* CoreMedia.framework */; };
+		AB8CB98018047CD60068964B /* SFVideoPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8CB97F18047CD60068964B /* SFVideoPlayerViewController.m */; };
+		AB8CB98118047CD60068964B /* SFVideoPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8CB97F18047CD60068964B /* SFVideoPlayerViewController.m */; };
 		DD952FCB16E7F5CF00470144 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97E18B1E1624CB5700B17A67 /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
@@ -90,6 +102,15 @@
 		AB86FB2C17FF6C0A00D9637E /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = SOURCE_ROOT; };
 		AB86FB3317FF724700D9637E /* SFVideoListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFVideoListViewController.h; sourceTree = SOURCE_ROOT; };
 		AB86FB3417FF724700D9637E /* SFVideoListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFVideoListViewController.m; sourceTree = SOURCE_ROOT; };
+		AB8CB96D18032D0C0068964B /* SFVideoListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFVideoListCell.h; sourceTree = SOURCE_ROOT; };
+		AB8CB96E18032D0C0068964B /* SFVideoListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFVideoListCell.m; sourceTree = SOURCE_ROOT; };
+		AB8CB971180352940068964B /* Video.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Video.h; sourceTree = SOURCE_ROOT; };
+		AB8CB972180352940068964B /* Video.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Video.m; sourceTree = SOURCE_ROOT; };
+		AB8CB975180467A20068964B /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		AB8CB97818046A680068964B /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		AB8CB97B18046EA20068964B /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		AB8CB97E18047CD60068964B /* SFVideoPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFVideoPlayerViewController.h; sourceTree = SOURCE_ROOT; };
+		AB8CB97F18047CD60068964B /* SFVideoPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFVideoPlayerViewController.m; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +118,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB8CB97D18046EA80068964B /* CoreMedia.framework in Frameworks */,
+				AB8CB97918046A680068964B /* AVFoundation.framework in Frameworks */,
+				AB8CB977180467AB0068964B /* MediaPlayer.framework in Frameworks */,
 				DD952FCB16E7F5CF00470144 /* CoreLocation.framework in Frameworks */,
 				743D7B6D157DA60100084B67 /* CoreGraphics.framework in Frameworks */,
 				2FCDD6B014A573F500295AAC /* QuartzCore.framework in Frameworks */,
@@ -116,6 +140,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB8CB97C18046EA20068964B /* CoreMedia.framework in Frameworks */,
+				AB8CB97A18046A6E0068964B /* AVFoundation.framework in Frameworks */,
+				AB8CB976180467A20068964B /* MediaPlayer.framework in Frameworks */,
 				AB86FB1317FF682000D9637E /* CoreLocation.framework in Frameworks */,
 				AB86FB1417FF682000D9637E /* CoreGraphics.framework in Frameworks */,
 				AB86FB1517FF682000D9637E /* QuartzCore.framework in Frameworks */,
@@ -155,6 +182,9 @@
 		09ABC07013A1D52D009C3FCF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				AB8CB97B18046EA20068964B /* CoreMedia.framework */,
+				AB8CB97818046A680068964B /* AVFoundation.framework */,
+				AB8CB975180467A20068964B /* MediaPlayer.framework */,
 				6372FF571613CC47002132AF /* AdSupport.framework */,
 				6372FF551613CC42002132AF /* Social.framework */,
 				6372FF521613CC3C002132AF /* Accounts.framework */,
@@ -185,6 +215,12 @@
 				AB86FAF517FF634500D9637E /* SFHomeViewController.m */,
 				AB86FB3317FF724700D9637E /* SFVideoListViewController.h */,
 				AB86FB3417FF724700D9637E /* SFVideoListViewController.m */,
+				AB8CB96D18032D0C0068964B /* SFVideoListCell.h */,
+				AB8CB96E18032D0C0068964B /* SFVideoListCell.m */,
+				AB8CB971180352940068964B /* Video.h */,
+				AB8CB972180352940068964B /* Video.m */,
+				AB8CB97E18047CD60068964B /* SFVideoPlayerViewController.h */,
+				AB8CB97F18047CD60068964B /* SFVideoPlayerViewController.m */,
 				09ABC07813A1D52D009C3FCF /* Supporting Files */,
 			);
 			name = "Stretch&Flex";
@@ -322,7 +358,10 @@
 				AB86FAF817FF634B00D9637E /* SFAppDelegate.m in Sources */,
 				AB86FB3517FF724700D9637E /* SFVideoListViewController.m in Sources */,
 				AB86FB0617FF63B200D9637E /* main.m in Sources */,
+				AB8CB98018047CD60068964B /* SFVideoPlayerViewController.m in Sources */,
+				AB8CB973180352940068964B /* Video.m in Sources */,
 				AB86FAF617FF634500D9637E /* SFHomeViewController.m in Sources */,
+				AB8CB96F18032D0C0068964B /* SFVideoListCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -333,7 +372,10 @@
 				AB86FB0F17FF682000D9637E /* SFAppDelegate.m in Sources */,
 				AB86FB3617FF724700D9637E /* SFVideoListViewController.m in Sources */,
 				AB86FB1017FF682000D9637E /* main.m in Sources */,
+				AB8CB98118047CD60068964B /* SFVideoPlayerViewController.m in Sources */,
+				AB8CB974180352940068964B /* Video.m in Sources */,
 				AB86FB1117FF682000D9637E /* SFHomeViewController.m in Sources */,
+				AB8CB97018032D0C0068964B /* SFVideoListCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -404,7 +446,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/app/Stretch&Flex-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = "Stretch&Flex";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "2F7A11CB-31C9-4579-95BB-1A1DCEEF92C6";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -427,7 +469,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/app/Stretch&Flex-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = "Stretch&Flex";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "2F7A11CB-31C9-4579-95BB-1A1DCEEF92C6";
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;
 			};

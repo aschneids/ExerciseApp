@@ -10,4 +10,6 @@
 
 @interface SFVideoListViewController : UITableViewController
 
+@property (weak, nonatomic) IBOutlet UITabBarItem *tabItem;
+
 @end

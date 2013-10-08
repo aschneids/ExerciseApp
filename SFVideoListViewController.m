@@ -6,10 +6,19 @@
 //
 //
 
+#import "Video.h"
+#import "SFVideoListCell.h"
 #import "SFVideoListViewController.h"
+#import "SFVideoPlayerViewController.h"
+#import <AVFoundation/AVFoundation.h>
+#import <MediaPlayer/MediaPlayer.h>
+#import <Parse/Parse.h>
 
-@interface SFVideoListViewController ()
+@interface SFVideoListViewController () {
 
+    NSMutableArray *_videoArr;
+    UIActivityIndicatorView *_activityIndicator;
+}
 @end
 
 @implementation SFVideoListViewController
@@ -26,12 +35,13 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
- 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    _videoArr = [[NSMutableArray alloc] init];
+    _activityIndicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+    [self.view addSubview:_activityIndicator];
+    _activityIndicator.center = CGPointMake(self.view.frame.size.width / 2, self.view.frame.size.height / 2);
+    [_activityIndicator startAnimating];
+    
+    [self downloadVideoData];
 }
 
 - (void)didReceiveMemoryWarning
@@ -40,81 +50,99 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)downloadVideoData
+{
+    PFQuery *query = [PFQuery queryWithClassName:@"SFVideo"];
+    [query whereKey:@"category" equalTo:self.tabItem.title];
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if (!error) {
+            // The find succeeded.
+            NSLog(@"Successfully retrieved %d videos.", objects.count);
+            // Do something with the found objects
+            for (PFObject *object in objects) {
+                Video *newVid = [[Video alloc] init];
+                newVid.url = [object valueForKey:@"url"];
+                newVid.title = [object valueForKey:@"title"];
+                newVid.length = [object valueForKey:@"length"];
+                [_videoArr addObject:newVid];
+            }
+            
+            [self.tableView reloadData];
+            [_activityIndicator stopAnimating];
+        } else {
+            // Log details of the failure
+            NSLog(@"Error: %@ %@", error, [error userInfo]);
+        }
+    }];
+}
+
+- (void)getThumbnailForUrl:(NSString *)url forImageView:(UIImageView *)imageView
+{
+    /*NSURL *videoURL = [NSURL URLWithString:url];
+    MPMoviePlayerController *player = [[MPMoviePlayerController alloc] initWithContentURL:videoURL];
+    UIImage *thumbnail = [player thumbnailImageAtTime:0.0 timeOption:MPMovieTimeOptionNearestKeyFrame];
+    [player stop];
+    return thumbnail;*/
+
+    NSURL *videoURL = [NSURL URLWithString:url];
+    AVURLAsset *asset=[[AVURLAsset alloc] initWithURL:videoURL options:nil];
+    AVAssetImageGenerator *generator = [[AVAssetImageGenerator alloc] initWithAsset:asset];
+    generator.appliesPreferredTrackTransform=TRUE;
+    CMTime thumbTime = CMTimeMakeWithSeconds(0,30);
+    
+    AVAssetImageGeneratorCompletionHandler handler = ^(CMTime requestedTime, CGImageRef im, CMTime actualTime, AVAssetImageGeneratorResult result, NSError *error){
+        if (result == AVAssetImageGeneratorSucceeded) {
+            imageView.image = [UIImage imageWithCGImage:im];
+        }
+        else {
+            NSLog(@"%@",[error localizedDescription]);
+            imageView.image = [UIImage imageNamed:@"video_dummy"];
+        }
+    };
+    
+    CGSize maxSize = CGSizeMake(320, 180);
+    generator.maximumSize = maxSize;
+    [generator generateCGImagesAsynchronouslyForTimes:[NSArray arrayWithObject:[NSValue valueWithCMTime:thumbTime]] completionHandler:handler];
+}
+
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
-    // Return the number of sections.
+    if ([_videoArr count] > 0) return 1;
     return 0;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
-    // Return the number of rows in the section.
-    return 0;
+    return [_videoArr count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    static NSString *CellIdentifier = @"VideoCell";
+    SFVideoListCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
-    // Configure the cell...
+    if (cell == nil) {
+        cell = [[SFVideoListCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+    }
+  
+    Video *temp = [_videoArr objectAtIndex:indexPath.row];
+    cell.titleLabel.text = temp.title;
+    cell.videoLengthLabel.text = temp.length;
+    [self getThumbnailForUrl:temp.url forImageView:cell.thumbnailImage];
     
     return cell;
 }
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
 
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    }   
-    else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
 #pragma mark - Navigation
 
-// In a story board-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    SFVideoPlayerViewController *target = (SFVideoPlayerViewController*)[segue destinationViewController];
+    Video *vid = [_videoArr objectAtIndex:self.tableView.indexPathForSelectedRow.row];
+    target.video = vid;
 }
-
- */
 
 @end
