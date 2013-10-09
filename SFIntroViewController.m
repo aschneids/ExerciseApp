@@ -1,20 +1,18 @@
 //
-//  SFVideoPlayerViewController.m
+//  SFIntroViewController.m
 //  Stretch&Flex
 //
-//  Created by Ashley Schneider on 10/8/13.
+//  Created by Ashley Schneider on 10/9/13.
 //
 //
 
-#import "SFVideoPlayerViewController.h"
+#import "SFIntroViewController.h"
 
-@interface SFVideoPlayerViewController ()
+@interface SFIntroViewController ()
 
 @end
 
-@implementation SFVideoPlayerViewController
-
-@synthesize video;
+@implementation SFIntroViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -28,7 +26,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	[self playVideo];
+	// Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning
@@ -37,24 +35,8 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)playVideo
-{
-    NSURL* url = [NSURL URLWithString:self.video.url];
-    NSURLRequest* request = [NSURLRequest requestWithURL:url];
-    [self.webView loadRequest:request];
-}
-
 - (IBAction)doneButtonPressed:(id)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
-}
-
-- (IBAction)handleTapGesture:(id)sender {
-    
-    if (self.navBar.hidden == NO) {
-        self.navBar.hidden = YES;
-    } else if (self.navBar.hidden == YES) {
-        self.navBar.hidden = NO;
-    }
 }
 
 #pragma mark UIToolbarDelegate

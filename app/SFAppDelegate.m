@@ -9,9 +9,12 @@
 #import <Parse/Parse.h>
 #import "SFAppDelegate.h"
 #import "SFHomeViewController.h"
+#import "SFVideoListViewController.h"
 
 @implementation SFAppDelegate
 
+@synthesize window;
+@synthesize tabBarController;
 
 #pragma mark - UIApplicationDelegate
 
@@ -32,6 +35,40 @@
     [application registerForRemoteNotificationTypes:UIRemoteNotificationTypeBadge|
                                                     UIRemoteNotificationTypeAlert|
                                                     UIRemoteNotificationTypeSound];
+    
+    self.tabBarController = [[UITabBarController alloc] init];
+    UIStoryboard*  storyboard = [UIStoryboard storyboardWithName:@"Storyboard" bundle:nil];
+    
+    SFHomeViewController *homeViewController = [storyboard instantiateViewControllerWithIdentifier:@"Home"];
+    homeViewController.tabBarItem.image = [UIImage imageNamed:@"home.png"];
+    homeViewController.title = @"Home";
+    
+    SFVideoListViewController *fieldViewController = [storyboard instantiateViewControllerWithIdentifier:@"VideoList"];
+    fieldViewController.tabBarItem.image = [UIImage imageNamed:@"field.png"];
+    fieldViewController.title = @"Field";
+    UINavigationController *fieldNavController = [[UINavigationController alloc] initWithRootViewController:fieldViewController];
+    fieldNavController.navigationBarHidden = YES;
+    
+    SFVideoListViewController *officeViewController = [storyboard instantiateViewControllerWithIdentifier:@"VideoList"];
+    officeViewController.tabBarItem.image = [UIImage imageNamed:@"office.png"];
+    officeViewController.title = @"Office";
+    UINavigationController *officeNavController = [[UINavigationController alloc] initWithRootViewController:officeViewController];
+    officeNavController.navigationBarHidden = YES;
+    
+    SFVideoListViewController *targetViewController = [storyboard instantiateViewControllerWithIdentifier:@"VideoList"];
+    targetViewController.tabBarItem.image = [UIImage imageNamed:@"target.png"];
+    targetViewController.title = @"Target Areas";
+    UINavigationController *targetNavController = [[UINavigationController alloc] initWithRootViewController:targetViewController];
+    targetNavController.navigationBarHidden = YES;
+
+    self.tabBarController.viewControllers = [NSArray arrayWithObjects:homeViewController, fieldNavController, officeNavController, targetNavController, nil];
+    
+    self.window = [[UIWindow alloc] initWithFrame:UIScreen.mainScreen.bounds];
+    self.window.rootViewController = self.tabBarController;
+    
+    // need this last line to display the window (and tab bar controller)
+    [self.window makeKeyAndVisible];
+    
     return YES;
 }
 

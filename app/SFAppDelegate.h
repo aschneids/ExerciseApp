@@ -9,12 +9,9 @@
 
 @class SFAppDelegate;
 
-@interface SFAppDelegate : NSObject <UIApplicationDelegate> {
+@interface SFAppDelegate : NSObject <UIApplicationDelegate, UITabBarControllerDelegate>
 
-}
-
-@property (nonatomic, strong) IBOutlet UIWindow *window;
-
-@property (nonatomic, strong) IBOutlet SFAppDelegate *viewController;
+@property (strong, nonatomic) UIWindow *window;
+@property (strong, nonatomic) UITabBarController *tabBarController;
 
 @end

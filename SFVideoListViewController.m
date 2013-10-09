@@ -84,7 +84,7 @@
     [player stop];
     return thumbnail;*/
 
-    NSURL *videoURL = [NSURL URLWithString:url];
+    /*NSURL *videoURL = [NSURL URLWithString:url];
     AVURLAsset *asset=[[AVURLAsset alloc] initWithURL:videoURL options:nil];
     AVAssetImageGenerator *generator = [[AVAssetImageGenerator alloc] initWithAsset:asset];
     generator.appliesPreferredTrackTransform=TRUE;
@@ -102,7 +102,18 @@
     
     CGSize maxSize = CGSizeMake(320, 180);
     generator.maximumSize = maxSize;
-    [generator generateCGImagesAsynchronouslyForTimes:[NSArray arrayWithObject:[NSValue valueWithCMTime:thumbTime]] completionHandler:handler];
+    [generator generateCGImagesAsynchronouslyForTimes:[NSArray arrayWithObject:[NSValue valueWithCMTime:thumbTime]] completionHandler:handler];*/
+    
+    NSURL *thumbnailUrl = [NSURL URLWithString:@"http://img.youtube.com/vi/_01wJMrfLOM/default.jpg"];
+    dispatch_queue_t fetchQ = dispatch_queue_create("ImageDownload", NULL);
+    dispatch_async(fetchQ, ^{
+        NSData *data = [NSData dataWithContentsOfURL:thumbnailUrl];
+        UIImage *image = [UIImage imageWithData:data];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            imageView.image = image;
+        });
+    });
+
 }
 
 #pragma mark - Table view data source
