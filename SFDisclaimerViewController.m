@@ -27,6 +27,15 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    
+    if([[NSUserDefaults standardUserDefaults] boolForKey:@"hasAgreed"] == NO) {
+        self.navItem.rightBarButtonItem = nil;
+    } else {
+        self.agreeButton.hidden = YES;
+        CGRect frame = self.textView.frame;
+        frame.size.height += self.agreeButton.frame.size.height;
+        self.textView.frame = frame;
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -35,7 +44,12 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)doneButtonPressed:(id)sender {
+- (IBAction)doneButtonTapped:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (IBAction)agreeButtonTapped:(id)sender {
+    [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"hasAgreed"];
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 

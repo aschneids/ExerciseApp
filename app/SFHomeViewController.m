@@ -27,6 +27,15 @@
     [super viewDidLoad];
 }
 
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    
+    if([[NSUserDefaults standardUserDefaults] boolForKey:@"hasAgreed"] == NO) {
+        [self performSegueWithIdentifier:@"Disclaimer" sender:self];
+    }
+}
+
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
     // Return YES for supported orientations
