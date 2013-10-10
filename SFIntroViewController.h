@@ -10,6 +10,4 @@
 
 @interface SFIntroViewController : UIViewController <UIToolbarDelegate>
 
-
-
 @end
