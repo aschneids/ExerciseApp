@@ -23,15 +23,6 @@
 
 @implementation SFVideoListViewController
 
-- (id)initWithStyle:(UITableViewStyle)style
-{
-    self = [super initWithStyle:style];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -54,16 +45,19 @@
 {
     PFQuery *query = [PFQuery queryWithClassName:@"SFVideo"];
     [query whereKey:@"category" equalTo:self.tabItem.title];
+    [query orderByAscending:@"sortID"];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-        if (!error) {
+        if (objects != nil) {
             // The find succeeded.
             NSLog(@"Successfully retrieved %d videos.", objects.count);
             // Do something with the found objects
             for (PFObject *object in objects) {
+                if ([object valueForKey:@"videoID"] == nil || [object valueForKey:@"title"] == nil || [object valueForKey:@"length"] == nil) continue;
                 Video *newVid = [[Video alloc] init];
-                newVid.url = [object valueForKey:@"url"];
+                newVid.url = [self generateYouTubeUrlforID:[object valueForKey:@"videoID"]];
                 newVid.title = [object valueForKey:@"title"];
                 newVid.length = [object valueForKey:@"length"];
+                newVid.thumbnailUrl = [self generateYouTubeThumbnailUrlforID:[object valueForKey:@"videoID"]];
                 [_videoArr addObject:newVid];
             }
             
@@ -76,35 +70,19 @@
     }];
 }
 
+- (NSString *)generateYouTubeUrlforID:(NSString *)videoID
+{
+    return [NSString stringWithFormat:@"http://www.youtube.com/embed/%@", videoID];
+}
+
+- (NSString *)generateYouTubeThumbnailUrlforID:(NSString *)videoID
+{
+    return [NSString stringWithFormat:@"http://img.youtube.com/vi/%@/default.jpg", videoID];
+}
+
 - (void)getThumbnailForUrl:(NSString *)url forImageView:(UIImageView *)imageView
 {
-    /*NSURL *videoURL = [NSURL URLWithString:url];
-    MPMoviePlayerController *player = [[MPMoviePlayerController alloc] initWithContentURL:videoURL];
-    UIImage *thumbnail = [player thumbnailImageAtTime:0.0 timeOption:MPMovieTimeOptionNearestKeyFrame];
-    [player stop];
-    return thumbnail;*/
-
-    /*NSURL *videoURL = [NSURL URLWithString:url];
-    AVURLAsset *asset=[[AVURLAsset alloc] initWithURL:videoURL options:nil];
-    AVAssetImageGenerator *generator = [[AVAssetImageGenerator alloc] initWithAsset:asset];
-    generator.appliesPreferredTrackTransform=TRUE;
-    CMTime thumbTime = CMTimeMakeWithSeconds(0,30);
-    
-    AVAssetImageGeneratorCompletionHandler handler = ^(CMTime requestedTime, CGImageRef im, CMTime actualTime, AVAssetImageGeneratorResult result, NSError *error){
-        if (result == AVAssetImageGeneratorSucceeded) {
-            imageView.image = [UIImage imageWithCGImage:im];
-        }
-        else {
-            NSLog(@"%@",[error localizedDescription]);
-            imageView.image = [UIImage imageNamed:@"video_dummy"];
-        }
-    };
-    
-    CGSize maxSize = CGSizeMake(320, 180);
-    generator.maximumSize = maxSize;
-    [generator generateCGImagesAsynchronouslyForTimes:[NSArray arrayWithObject:[NSValue valueWithCMTime:thumbTime]] completionHandler:handler];*/
-    
-    NSURL *thumbnailUrl = [NSURL URLWithString:@"http://img.youtube.com/vi/_01wJMrfLOM/default.jpg"];
+    NSURL *thumbnailUrl = [NSURL URLWithString:url];
     dispatch_queue_t fetchQ = dispatch_queue_create("ImageDownload", NULL);
     dispatch_async(fetchQ, ^{
         NSData *data = [NSData dataWithContentsOfURL:thumbnailUrl];
@@ -113,7 +91,6 @@
             imageView.image = image;
         });
     });
-
 }
 
 #pragma mark - Table view data source
@@ -141,7 +118,7 @@
     Video *temp = [_videoArr objectAtIndex:indexPath.row];
     cell.titleLabel.text = temp.title;
     cell.videoLengthLabel.text = temp.length;
-    [self getThumbnailForUrl:temp.url forImageView:cell.thumbnailImage];
+    [self getThumbnailForUrl:temp.thumbnailUrl forImageView:cell.thumbnailImage];
     
     return cell;
 }

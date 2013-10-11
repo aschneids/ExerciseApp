@@ -39,9 +39,22 @@
 
 - (void)playVideo
 {
-    NSURL* url = [NSURL URLWithString:self.video.url];
+    NSString *html = [NSString stringWithFormat:@"\
+    <html><head>\
+    <style type=\"text/css\">\
+    body {    background-color: transparent;\
+    color: white; \
+    }\
+    </style>\
+    </head><body style=\"margin:0\">\
+    <iframe class=\"youtube-player\" width=\"320\" height=\"300\" src=\"%@\" frameborder=\"0\" allowfullscreen=\"true\"></iframe>\
+    </body></html>", self.video.url];
+
+    [self.webView loadHTMLString:html baseURL:nil];
+    
+    /*NSURL* url = [NSURL URLWithString:self.video.url];
     NSURLRequest* request = [NSURLRequest requestWithURL:url];
-    [self.webView loadRequest:request];
+    [self.webView loadRequest:request];*/
 }
 
 - (IBAction)doneButtonPressed:(id)sender {

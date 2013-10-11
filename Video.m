@@ -13,5 +13,6 @@
 @synthesize url;
 @synthesize title;
 @synthesize length;
+@synthesize thumbnailUrl;
 
 @end
