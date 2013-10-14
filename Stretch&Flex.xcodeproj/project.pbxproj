@@ -18,6 +18,8 @@
 		09BEF34C13D51C3F001BBCDB /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09BEF34B13D51C3F001BBCDB /* Security.framework */; };
 		2FCDD6B014A573F500295AAC /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FCDD6AF14A573F500295AAC /* QuartzCore.framework */; };
 		743D7B6D157DA60100084B67 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 743D7B6C157DA60100084B67 /* CoreGraphics.framework */; };
+		AB42526E180C5166009DA224 /* XCDYouTubeVideoPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB42526D180C5166009DA224 /* XCDYouTubeVideoPlayerViewController.m */; };
+		AB42526F180C5166009DA224 /* XCDYouTubeVideoPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB42526D180C5166009DA224 /* XCDYouTubeVideoPlayerViewController.m */; };
 		AB86FAF617FF634500D9637E /* SFHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB86FAF517FF634500D9637E /* SFHomeViewController.m */; };
 		AB86FAF817FF634B00D9637E /* SFAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AB86FAF717FF634B00D9637E /* SFAppDelegate.m */; };
 		AB86FAFD17FF638400D9637E /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AB86FAFA17FF638400D9637E /* Default-568h@2x.png */; };
@@ -89,6 +91,8 @@
 		6372FF571613CC47002132AF /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		743D7B6C157DA60100084B67 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		97E18B1E1624CB5700B17A67 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		AB42526C180C5166009DA224 /* XCDYouTubeVideoPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCDYouTubeVideoPlayerViewController.h; sourceTree = SOURCE_ROOT; };
+		AB42526D180C5166009DA224 /* XCDYouTubeVideoPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCDYouTubeVideoPlayerViewController.m; sourceTree = SOURCE_ROOT; };
 		AB86FAF417FF633300D9637E /* SFHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SFHomeViewController.h; path = app/SFHomeViewController.h; sourceTree = SOURCE_ROOT; };
 		AB86FAF517FF634500D9637E /* SFHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SFHomeViewController.m; path = app/SFHomeViewController.m; sourceTree = SOURCE_ROOT; };
 		AB86FAF717FF634B00D9637E /* SFAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SFAppDelegate.m; path = app/SFAppDelegate.m; sourceTree = SOURCE_ROOT; };
@@ -233,6 +237,8 @@
 				ABAB76BF18061EE2006689E9 /* SFIntroViewController.m */,
 				ABAB76C21807174B006689E9 /* SFDisclaimerViewController.h */,
 				ABAB76C31807174B006689E9 /* SFDisclaimerViewController.m */,
+				AB42526C180C5166009DA224 /* XCDYouTubeVideoPlayerViewController.h */,
+				AB42526D180C5166009DA224 /* XCDYouTubeVideoPlayerViewController.m */,
 				09ABC07813A1D52D009C3FCF /* Supporting Files */,
 			);
 			name = "Stretch&Flex";
@@ -372,6 +378,7 @@
 				AB86FB0617FF63B200D9637E /* main.m in Sources */,
 				AB8CB98018047CD60068964B /* SFVideoPlayerViewController.m in Sources */,
 				AB8CB973180352940068964B /* Video.m in Sources */,
+				AB42526E180C5166009DA224 /* XCDYouTubeVideoPlayerViewController.m in Sources */,
 				AB86FAF617FF634500D9637E /* SFHomeViewController.m in Sources */,
 				ABAB76C018061EE2006689E9 /* SFIntroViewController.m in Sources */,
 				ABAB76C41807174B006689E9 /* SFDisclaimerViewController.m in Sources */,
@@ -388,6 +395,7 @@
 				AB86FB1017FF682000D9637E /* main.m in Sources */,
 				AB8CB98118047CD60068964B /* SFVideoPlayerViewController.m in Sources */,
 				AB8CB974180352940068964B /* Video.m in Sources */,
+				AB42526F180C5166009DA224 /* XCDYouTubeVideoPlayerViewController.m in Sources */,
 				AB86FB1117FF682000D9637E /* SFHomeViewController.m in Sources */,
 				ABAB76C118061EE2006689E9 /* SFIntroViewController.m in Sources */,
 				ABAB76C51807174B006689E9 /* SFDisclaimerViewController.m in Sources */,

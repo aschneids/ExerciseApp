@@ -39,7 +39,7 @@
 
 - (void)playVideo
 {
-    NSString *html = [NSString stringWithFormat:@"\
+    /*NSString *html = [NSString stringWithFormat:@"\
     <html><head>\
     <style type=\"text/css\">\
     body {    background-color: transparent;\

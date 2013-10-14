@@ -6,6 +6,7 @@
 //
 //
 
+#import "XCDYouTubeVideoPlayerViewController.h"
 #import "Video.h"
 #import "SFVideoListCell.h"
 #import "SFVideoListViewController.h"
@@ -54,7 +55,7 @@
             for (PFObject *object in objects) {
                 if ([object valueForKey:@"videoID"] == nil || [object valueForKey:@"title"] == nil || [object valueForKey:@"length"] == nil) continue;
                 Video *newVid = [[Video alloc] init];
-                newVid.url = [self generateYouTubeUrlforID:[object valueForKey:@"videoID"]];
+                newVid.videoID = [object valueForKey:@"videoID"];
                 newVid.title = [object valueForKey:@"title"];
                 newVid.length = [object valueForKey:@"length"];
                 newVid.thumbnailUrl = [self generateYouTubeThumbnailUrlforID:[object valueForKey:@"videoID"]];
@@ -126,11 +127,19 @@
 
 #pragma mark - Navigation
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    Video *vid = [_videoArr objectAtIndex:self.tableView.indexPathForSelectedRow.row];
+    XCDYouTubeVideoPlayerViewController *target = [[XCDYouTubeVideoPlayerViewController alloc] initWithVideoIdentifier:vid.videoID];
+    [self presentMoviePlayerViewControllerAnimated:target];
+    [target.moviePlayer play];
+}
+
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    SFVideoPlayerViewController *target = (SFVideoPlayerViewController*)[segue destinationViewController];
+    /*SFVideoPlayerViewController *target = (SFVideoPlayerViewController*)[segue destinationViewController];
     Video *vid = [_videoArr objectAtIndex:self.tableView.indexPathForSelectedRow.row];
-    target.video = vid;
+    target.video = vid;*/
 }
 
 @end

@@ -44,7 +44,6 @@
                                     <outlet property="thumbnailImage" destination="FQt-rq-wPB" id="X1I-rR-6pE"/>
                                     <outlet property="titleLabel" destination="hiy-Ui-C0x" id="O6D-7s-jIX"/>
                                     <outlet property="videoLengthLabel" destination="vV6-4u-oss" id="2rL-hj-cBq"/>
-                                    <segue destination="fUJ-8I-clT" kind="modal" identifier="VideoPlayer" id="Nos-ZV-8eX"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -250,7 +249,7 @@ Nulla venenatis sapien id tempor tempor. Nulla consequat porttitor placerat. Int
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="862" y="726"/>
+            <point key="canvasLocation" x="1416" y="716"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

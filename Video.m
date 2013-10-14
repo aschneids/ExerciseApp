@@ -10,7 +10,7 @@
 
 @implementation Video
 
-@synthesize url;
+@synthesize videoID;
 @synthesize title;
 @synthesize length;
 @synthesize thumbnailUrl;
