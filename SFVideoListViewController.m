@@ -27,6 +27,12 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    NSNotificationCenter *defaultCenter = [NSNotificationCenter defaultCenter];
+    [defaultCenter addObserver:self selector:@selector(videoPlayerViewControllerDidReceiveMetadata:) name:XCDYouTubeVideoPlayerViewControllerDidReceiveMetadataNotification object:nil];
+	[defaultCenter addObserver:self selector:@selector(moviePlayerPlaybackDidFinish:) name:MPMoviePlayerPlaybackDidFinishNotification object:nil];
+	[defaultCenter addObserver:self selector:@selector(moviePlayerPlaybackStateDidChange:) name:MPMoviePlayerPlaybackStateDidChangeNotification object:nil];
+	[defaultCenter addObserver:self selector:@selector(moviePlayerLoadStateDidChange:) name:MPMoviePlayerLoadStateDidChangeNotification object:nil];
+
     _videoArr = [[NSMutableArray alloc] init];
     _activityIndicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
     [self.view addSubview:_activityIndicator];
@@ -132,7 +138,6 @@
     Video *vid = [_videoArr objectAtIndex:self.tableView.indexPathForSelectedRow.row];
     XCDYouTubeVideoPlayerViewController *target = [[XCDYouTubeVideoPlayerViewController alloc] initWithVideoIdentifier:vid.videoID];
     [self presentMoviePlayerViewControllerAnimated:target];
-    [target.moviePlayer play];
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
@@ -141,5 +146,76 @@
     Video *vid = [_videoArr objectAtIndex:self.tableView.indexPathForSelectedRow.row];
     target.video = vid;*/
 }
+
+#pragma mark - Notifications
+- (void) moviePlayerPlaybackDidFinish:(NSNotification *)notification
+{
+	MPMovieFinishReason finishReason = [notification.userInfo[MPMoviePlayerPlaybackDidFinishReasonUserInfoKey] integerValue];
+	NSError *error = notification.userInfo[XCDMoviePlayerPlaybackDidFinishErrorUserInfoKey];
+	NSString *reason = @"Unknown";
+	switch (finishReason)
+	{
+		case MPMovieFinishReasonPlaybackEnded:
+			reason = @"Playback Ended";
+			break;
+		case MPMovieFinishReasonPlaybackError:
+			reason = @"Playback Error";
+			break;
+		case MPMovieFinishReasonUserExited:
+			reason = @"User Exited";
+			break;
+	}
+	NSLog(@"Finish Reason: %@%@", reason, error ? [@"\n" stringByAppendingString:[error localizedDescription]] : @"");
+}
+
+- (void) moviePlayerPlaybackStateDidChange:(NSNotification *)notification
+{
+	MPMoviePlayerController *moviePlayerController = notification.object;
+	NSString *playbackState = @"Unknown";
+	switch (moviePlayerController.playbackState)
+	{
+		case MPMoviePlaybackStateStopped:
+			playbackState = @"Stopped";
+			break;
+		case MPMoviePlaybackStatePlaying:
+			playbackState = @"Playing";
+			break;
+		case MPMoviePlaybackStatePaused:
+			playbackState = @"Paused";
+			break;
+		case MPMoviePlaybackStateInterrupted:
+			playbackState = @"Interrupted";
+			break;
+		case MPMoviePlaybackStateSeekingForward:
+			playbackState = @"Seeking Forward";
+			break;
+		case MPMoviePlaybackStateSeekingBackward:
+			playbackState = @"Seeking Backward";
+			break;
+	}
+	NSLog(@"Playback State: %@", playbackState);
+}
+
+- (void) moviePlayerLoadStateDidChange:(NSNotification *)notification
+{
+	MPMoviePlayerController *moviePlayerController = notification.object;
+    
+	NSMutableString *loadState = [NSMutableString new];
+	MPMovieLoadState state = moviePlayerController.loadState;
+	if (state & MPMovieLoadStatePlayable)
+		[loadState appendString:@" | Playable"];
+	if (state & MPMovieLoadStatePlaythroughOK)
+		[loadState appendString:@" | Playthrough OK"];
+	if (state & MPMovieLoadStateStalled)
+		[loadState appendString:@" | Stalled"];
+    
+	NSLog(@"Load State: %@", loadState.length > 0 ? [loadState substringFromIndex:3] : @"N/A");
+}
+
+- (void) videoPlayerViewControllerDidReceiveMetadata:(NSNotification *)notification
+{
+	NSLog(@"Metadata: %@", notification.userInfo);
+}
+
 
 @end
