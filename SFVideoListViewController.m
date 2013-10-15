@@ -8,6 +8,7 @@
 
 #import "XCDYouTubeVideoPlayerViewController.h"
 #import "Video.h"
+#import "SFAppDelegate.h"
 #import "SFVideoListCell.h"
 #import "SFVideoListViewController.h"
 #import "SFVideoPlayerViewController.h"
@@ -59,11 +60,13 @@
             NSLog(@"Successfully retrieved %d videos.", objects.count);
             // Do something with the found objects
             for (PFObject *object in objects) {
-                if ([object valueForKey:@"videoID"] == nil || [object valueForKey:@"title"] == nil || [object valueForKey:@"length"] == nil) continue;
+                if ([object valueForKey:@"videoID"] == nil || [object valueForKey:@"title"] == nil ||
+                    [object valueForKey:@"length"] == nil || [object valueForKey:@"isAvailableInLite"] == nil) continue;
                 Video *newVid = [[Video alloc] init];
                 newVid.videoID = [object valueForKey:@"videoID"];
                 newVid.title = [object valueForKey:@"title"];
                 newVid.length = [object valueForKey:@"length"];
+                newVid.isAvailableInLite = [[object valueForKey:@"isAvailableInLite"] boolValue];
                 newVid.thumbnailUrl = [self generateYouTubeThumbnailUrlforID:[object valueForKey:@"videoID"]];
                 [_videoArr addObject:newVid];
             }
@@ -136,8 +139,12 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     Video *vid = [_videoArr objectAtIndex:self.tableView.indexPathForSelectedRow.row];
-    XCDYouTubeVideoPlayerViewController *target = [[XCDYouTubeVideoPlayerViewController alloc] initWithVideoIdentifier:vid.videoID];
-    [self presentMoviePlayerViewControllerAnimated:target];
+    if ([SFAppDelegate isLiteVersion] && vid.isAvailableInLite == NO) {
+        [self showAppWithIdentifier:@"669186589"];
+    } else {
+        XCDYouTubeVideoPlayerViewController *target = [[XCDYouTubeVideoPlayerViewController alloc] initWithVideoIdentifier:vid.videoID];
+        [self presentMoviePlayerViewControllerAnimated:target];
+    }
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
@@ -145,6 +152,28 @@
     /*SFVideoPlayerViewController *target = (SFVideoPlayerViewController*)[segue destinationViewController];
     Video *vid = [_videoArr objectAtIndex:self.tableView.indexPathForSelectedRow.row];
     target.video = vid;*/
+}
+
+- (void)showAppWithIdentifier:(NSString *)identifier
+{
+    SKStoreProductViewController *storeViewController = [[SKStoreProductViewController alloc] init];
+    
+    storeViewController.delegate = self;
+    
+    NSDictionary *parameters = @{SKStoreProductParameterITunesItemIdentifier:identifier};
+    
+    [storeViewController loadProductWithParameters:parameters
+                                   completionBlock:^(BOOL result, NSError *error) {
+                                       if (result)
+                                           [self presentViewController:storeViewController animated:YES completion:nil];
+                                   }];
+}
+
+#pragma mark SKStoreProductViewControllerDelegate
+
+-(void)productViewControllerDidFinish:(SKStoreProductViewController *)viewController
+{
+    [viewController dismissViewControllerAnimated:YES completion:nil];
 }
 
 #pragma mark - Notifications

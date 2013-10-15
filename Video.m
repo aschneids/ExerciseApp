@@ -14,5 +14,6 @@
 @synthesize title;
 @synthesize length;
 @synthesize thumbnailUrl;
+@synthesize isAvailableInLite;
 
 @end

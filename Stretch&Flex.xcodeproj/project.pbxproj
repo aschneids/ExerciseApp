@@ -66,6 +66,8 @@
 		AB8CB97D18046EA80068964B /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB8CB97B18046EA20068964B /* CoreMedia.framework */; };
 		AB8CB98018047CD60068964B /* SFVideoPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8CB97F18047CD60068964B /* SFVideoPlayerViewController.m */; };
 		AB8CB98118047CD60068964B /* SFVideoPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8CB97F18047CD60068964B /* SFVideoPlayerViewController.m */; };
+		ABA0AEB6180DAD28009D3568 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABA0AEB5180DAD28009D3568 /* StoreKit.framework */; };
+		ABA0AEB7180DAD3B009D3568 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABA0AEB5180DAD28009D3568 /* StoreKit.framework */; };
 		ABAB76C018061EE2006689E9 /* SFIntroViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABAB76BF18061EE2006689E9 /* SFIntroViewController.m */; };
 		ABAB76C118061EE2006689E9 /* SFIntroViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABAB76BF18061EE2006689E9 /* SFIntroViewController.m */; };
 		ABAB76C41807174B006689E9 /* SFDisclaimerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABAB76C31807174B006689E9 /* SFDisclaimerViewController.m */; };
@@ -119,6 +121,7 @@
 		AB8CB97B18046EA20068964B /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		AB8CB97E18047CD60068964B /* SFVideoPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFVideoPlayerViewController.h; sourceTree = SOURCE_ROOT; };
 		AB8CB97F18047CD60068964B /* SFVideoPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFVideoPlayerViewController.m; sourceTree = SOURCE_ROOT; };
+		ABA0AEB5180DAD28009D3568 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		ABAB76BE18061EE2006689E9 /* SFIntroViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFIntroViewController.h; sourceTree = SOURCE_ROOT; };
 		ABAB76BF18061EE2006689E9 /* SFIntroViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFIntroViewController.m; sourceTree = SOURCE_ROOT; };
 		ABAB76C21807174B006689E9 /* SFDisclaimerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFDisclaimerViewController.h; sourceTree = SOURCE_ROOT; };
@@ -130,6 +133,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ABA0AEB7180DAD3B009D3568 /* StoreKit.framework in Frameworks */,
 				AB8CB97D18046EA80068964B /* CoreMedia.framework in Frameworks */,
 				AB8CB97918046A680068964B /* AVFoundation.framework in Frameworks */,
 				AB8CB977180467AB0068964B /* MediaPlayer.framework in Frameworks */,
@@ -152,6 +156,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ABA0AEB6180DAD28009D3568 /* StoreKit.framework in Frameworks */,
 				AB8CB97C18046EA20068964B /* CoreMedia.framework in Frameworks */,
 				AB8CB97A18046A6E0068964B /* AVFoundation.framework in Frameworks */,
 				AB8CB976180467A20068964B /* MediaPlayer.framework in Frameworks */,
@@ -194,6 +199,7 @@
 		09ABC07013A1D52D009C3FCF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				ABA0AEB5180DAD28009D3568 /* StoreKit.framework */,
 				AB8CB97B18046EA20068964B /* CoreMedia.framework */,
 				AB8CB97818046A680068964B /* AVFoundation.framework */,
 				AB8CB975180467A20068964B /* MediaPlayer.framework */,
@@ -223,22 +229,9 @@
 				AB86FB2C17FF6C0A00D9637E /* Storyboard.storyboard */,
 				AB86FAF917FF635200D9637E /* SFAppDelegate.h */,
 				AB86FAF717FF634B00D9637E /* SFAppDelegate.m */,
-				AB86FAF417FF633300D9637E /* SFHomeViewController.h */,
-				AB86FAF517FF634500D9637E /* SFHomeViewController.m */,
-				AB86FB3317FF724700D9637E /* SFVideoListViewController.h */,
-				AB86FB3417FF724700D9637E /* SFVideoListViewController.m */,
-				AB8CB96D18032D0C0068964B /* SFVideoListCell.h */,
-				AB8CB96E18032D0C0068964B /* SFVideoListCell.m */,
-				AB8CB971180352940068964B /* Video.h */,
-				AB8CB972180352940068964B /* Video.m */,
-				AB8CB97E18047CD60068964B /* SFVideoPlayerViewController.h */,
-				AB8CB97F18047CD60068964B /* SFVideoPlayerViewController.m */,
-				ABAB76BE18061EE2006689E9 /* SFIntroViewController.h */,
-				ABAB76BF18061EE2006689E9 /* SFIntroViewController.m */,
-				ABAB76C21807174B006689E9 /* SFDisclaimerViewController.h */,
-				ABAB76C31807174B006689E9 /* SFDisclaimerViewController.m */,
-				AB42526C180C5166009DA224 /* XCDYouTubeVideoPlayerViewController.h */,
-				AB42526D180C5166009DA224 /* XCDYouTubeVideoPlayerViewController.m */,
+				ABA0AEB3180DAA32009D3568 /* Modals */,
+				ABA0AEB4180DAA43009D3568 /* Views */,
+				ABA0AEAF180DA9D7009D3568 /* ViewControllers */,
 				09ABC07813A1D52D009C3FCF /* Supporting Files */,
 			);
 			name = "Stretch&Flex";
@@ -259,6 +252,43 @@
 				AB86FB0517FF63B200D9637E /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		ABA0AEAF180DA9D7009D3568 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				ABAB76C21807174B006689E9 /* SFDisclaimerViewController.h */,
+				ABAB76C31807174B006689E9 /* SFDisclaimerViewController.m */,
+				AB86FAF417FF633300D9637E /* SFHomeViewController.h */,
+				AB86FAF517FF634500D9637E /* SFHomeViewController.m */,
+				ABAB76BE18061EE2006689E9 /* SFIntroViewController.h */,
+				ABAB76BF18061EE2006689E9 /* SFIntroViewController.m */,
+				AB86FB3317FF724700D9637E /* SFVideoListViewController.h */,
+				AB86FB3417FF724700D9637E /* SFVideoListViewController.m */,
+				AB8CB97E18047CD60068964B /* SFVideoPlayerViewController.h */,
+				AB8CB97F18047CD60068964B /* SFVideoPlayerViewController.m */,
+				AB42526C180C5166009DA224 /* XCDYouTubeVideoPlayerViewController.h */,
+				AB42526D180C5166009DA224 /* XCDYouTubeVideoPlayerViewController.m */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		ABA0AEB3180DAA32009D3568 /* Modals */ = {
+			isa = PBXGroup;
+			children = (
+				AB8CB971180352940068964B /* Video.h */,
+				AB8CB972180352940068964B /* Video.m */,
+			);
+			name = Modals;
+			sourceTree = "<group>";
+		};
+		ABA0AEB4180DAA43009D3568 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				AB8CB96D18032D0C0068964B /* SFVideoListCell.h */,
+				AB8CB96E18032D0C0068964B /* SFVideoListCell.m */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

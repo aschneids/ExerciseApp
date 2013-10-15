@@ -128,6 +128,13 @@
      */
 }
 
++ (BOOL)isLiteVersion
+{
+    NSDictionary *infoDictionary = [[NSBundle mainBundle] infoDictionary];
+    NSString *bundleIdentifier = [infoDictionary objectForKey:@"CFBundleIdentifier"];
+    NSString *threeLetterAppIdentifier = [[bundleIdentifier componentsSeparatedByString:@"."] lastObject];
+    return [threeLetterAppIdentifier isEqualToString:@"Stretch-FlexLite"] ? YES : NO;
+}
 
 #pragma mark - ()
 
