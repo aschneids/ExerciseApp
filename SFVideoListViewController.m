@@ -20,6 +20,7 @@
 
     NSMutableArray *_videoArr;
     UIActivityIndicatorView *_activityIndicator;
+    BOOL firstLoad;
 }
 @end
 
@@ -28,6 +29,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    firstLoad = YES;
     NSNotificationCenter *defaultCenter = [NSNotificationCenter defaultCenter];
     [defaultCenter addObserver:self selector:@selector(videoPlayerViewControllerDidReceiveMetadata:) name:XCDYouTubeVideoPlayerViewControllerDidReceiveMetadataNotification object:nil];
 	[defaultCenter addObserver:self selector:@selector(moviePlayerPlaybackDidFinish:) name:MPMoviePlayerPlaybackDidFinishNotification object:nil];
@@ -43,10 +45,63 @@
     [self downloadVideoData];
 }
 
+- (void)viewDidAppear:(BOOL)animated
+{
+    if (!firstLoad) [self checkForVideoUpdates];
+    firstLoad = NO;
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)checkForVideoUpdates
+{
+    PFQuery *query = [PFQuery queryWithClassName:@"SFVideo"];
+    [query whereKey:@"category" equalTo:self.tabItem.title];
+    [query orderByAscending:@"sortID"];
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if (objects != nil) {
+            // The find succeeded.
+            NSLog(@"Successfully retrieved %d videos.", objects.count);
+            BOOL reload = NO;
+            NSMutableArray *newArr = [[NSMutableArray alloc] init];
+            int i = 0;
+            for (PFObject *object in objects) {
+                if ([object valueForKey:@"videoID"] == nil || [object valueForKey:@"title"] == nil ||
+                    [object valueForKey:@"length"] == nil || [object valueForKey:@"isAvailableInLite"] == nil) continue;
+                Video *newVid = [[Video alloc] init];
+                newVid.videoID = [object valueForKey:@"videoID"];
+                newVid.title = [object valueForKey:@"title"];
+                newVid.length = [object valueForKey:@"length"];
+                newVid.isAvailableInLite = [[object valueForKey:@"isAvailableInLite"] boolValue];
+                newVid.thumbnailUrl = [self generateYouTubeThumbnailUrlforID:[object valueForKey:@"videoID"]];
+                if (i < [_videoArr count]) {
+                    Video *oldVid = [_videoArr objectAtIndex:i];
+                    if (![oldVid.videoID isEqualToString:newVid.videoID] || ![oldVid.title isEqualToString:newVid.title] ||
+                        ![oldVid.length isEqualToString:newVid.length]) {
+                        [newArr addObject:newVid];
+                        reload = YES;
+                    } else [newArr addObject:oldVid];
+                } else {
+                    [newArr addObject:newVid];
+                    reload = YES;
+                }
+                
+                i++;
+            }
+            
+            if (reload || [_videoArr count] != [newArr count]) {
+                _videoArr = newArr;
+                [self.tableView reloadData];
+            }
+        } else {
+            // Log details of the failure
+            NSLog(@"Error: %@ %@", error, [error userInfo]);
+        }
+    }];
 }
 
 - (void)downloadVideoData
@@ -125,6 +180,7 @@
         cell = [[SFVideoListCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
   
+    int section = indexPath.section;
     Video *temp = [_videoArr objectAtIndex:indexPath.row];
     cell.titleLabel.text = temp.title;
     cell.videoLengthLabel.text = temp.length;
