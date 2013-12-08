@@ -337,7 +337,7 @@
 				LastUpgradeCheck = 0430;
 				TargetAttributes = {
 					09ABC06C13A1D52D009C3FCF = {
-						DevelopmentTeam = L284HL7MYY;
+						DevelopmentTeam = 3GQT7SZ24F;
 						SystemCapabilities = {
 							com.apple.InAppPurchase = {
 								enabled = 0;
@@ -345,7 +345,7 @@
 						};
 					};
 					AB86FB0D17FF682000D9637E = {
-						DevelopmentTeam = L284HL7MYY;
+						DevelopmentTeam = 3GQT7SZ24F;
 					};
 				};
 			};
@@ -451,7 +451,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -469,7 +469,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
@@ -500,7 +500,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/app/Stretch&Flex-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = "Stretch&Flex";
-				PROVISIONING_PROFILE = "2F7A11CB-31C9-4579-95BB-1A1DCEEF92C6";
+				PROVISIONING_PROFILE = "14C9B197-0F70-4ECF-AB62-ABDDBB25E233";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -523,7 +523,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/app/Stretch&Flex-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = "Stretch&Flex";
-				PROVISIONING_PROFILE = "2F7A11CB-31C9-4579-95BB-1A1DCEEF92C6";
+				PROVISIONING_PROFILE = "14C9B197-0F70-4ECF-AB62-ABDDBB25E233";
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;
 			};
@@ -534,7 +534,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Ashley Schneider (V4X92R923S)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -558,7 +558,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Ashley Schneider (V4X92R923S)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				FRAMEWORK_SEARCH_PATHS = (

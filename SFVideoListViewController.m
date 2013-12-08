@@ -30,6 +30,7 @@
 {
     [super viewDidLoad];
     firstLoad = YES;
+    self.titleLabel.text = self.tabBarItem.title;
     NSNotificationCenter *defaultCenter = [NSNotificationCenter defaultCenter];
     [defaultCenter addObserver:self selector:@selector(videoPlayerViewControllerDidReceiveMetadata:) name:XCDYouTubeVideoPlayerViewControllerDidReceiveMetadataNotification object:nil];
 	[defaultCenter addObserver:self selector:@selector(moviePlayerPlaybackDidFinish:) name:MPMoviePlayerPlaybackDidFinishNotification object:nil];
@@ -180,7 +181,6 @@
         cell = [[SFVideoListCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
   
-    int section = indexPath.section;
     Video *temp = [_videoArr objectAtIndex:indexPath.row];
     cell.titleLabel.text = temp.title;
     cell.videoLengthLabel.text = temp.length;
