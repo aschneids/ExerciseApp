@@ -6,6 +6,7 @@
 //  Copyright (c) 2013 Lunde. All rights reserved.
 //
 
+#import "SFAppDelegate.h"
 #import "SFHomeViewController.h"
 #import <Parse/Parse.h>
 
@@ -40,6 +41,11 @@
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
     // Return YES for supported orientations
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
+}
+
+- (IBAction)swipeRight:(id)sender {
+    SFAppDelegate *appDelegate = (SFAppDelegate *)[[UIApplication sharedApplication] delegate];
+    appDelegate.tabBarController.selectedIndex++;
 }
 
 @end

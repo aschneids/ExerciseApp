@@ -14,5 +14,7 @@
 @property (weak, nonatomic) IBOutlet UITabBarItem *tabItem;
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+- (IBAction)swipeLeft:(id)sender;
+- (IBAction)swipeRight:(id)sender;
 
 @end

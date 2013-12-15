@@ -8,4 +8,6 @@
 
 @interface SFHomeViewController : UIViewController
 
+- (IBAction)swipeRight:(id)sender;
+
 @end

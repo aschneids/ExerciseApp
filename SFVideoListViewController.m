@@ -31,6 +31,7 @@
     [super viewDidLoad];
     firstLoad = YES;
     self.titleLabel.text = self.tabBarItem.title;
+    
     NSNotificationCenter *defaultCenter = [NSNotificationCenter defaultCenter];
     [defaultCenter addObserver:self selector:@selector(videoPlayerViewControllerDidReceiveMetadata:) name:XCDYouTubeVideoPlayerViewControllerDidReceiveMetadataNotification object:nil];
 	[defaultCenter addObserver:self selector:@selector(moviePlayerPlaybackDidFinish:) name:MPMoviePlayerPlaybackDidFinishNotification object:nil];
@@ -302,5 +303,17 @@
 	NSLog(@"Metadata: %@", notification.userInfo);
 }
 
+
+- (IBAction)swipeLeft:(id)sender {
+    SFAppDelegate *appDelegate = (SFAppDelegate *)[[UIApplication sharedApplication] delegate];
+    if (appDelegate.tabBarController.selectedIndex == 0) return;
+    appDelegate.tabBarController.selectedIndex--;
+}
+
+- (IBAction)swipeRight:(id)sender {
+    SFAppDelegate *appDelegate = (SFAppDelegate *)[[UIApplication sharedApplication] delegate];
+    if (appDelegate.tabBarController.selectedIndex == 3) return;
+    appDelegate.tabBarController.selectedIndex++;
+}
 
 @end

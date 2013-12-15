@@ -64,6 +64,11 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="Aht-hO-n4s" appends="YES" id="owJ-Nx-PGu"/>
+                            <outletCollection property="gestureRecognizers" destination="iEU-5R-rUb" appends="YES" id="UXc-vA-RNm"/>
+                        </connections>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="crX-xQ-adS"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
@@ -74,6 +79,16 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SJu-XF-8fQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="Aht-hO-n4s">
+                    <connections>
+                        <action selector="swipeLeft:" destination="CPH-uX-U27" id="H7V-1Z-PoA"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="left" id="iEU-5R-rUb">
+                    <connections>
+                        <action selector="swipeRight:" destination="CPH-uX-U27" id="6f5-Ub-YmU"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="761" y="726"/>
         </scene>
@@ -107,11 +122,20 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="gFF-cj-dSu" appends="YES" id="UDk-F2-uhH"/>
+                        </connections>
                     </view>
                     <tabBarItem key="tabBarItem" title="Home" id="iLq-sV-yqV"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Soe-u9-n4J" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="left" id="gFF-cj-dSu">
+                    <connections>
+                        <action selector="swipeRight:" destination="O0o-hR-XYH" id="QTu-nM-VYX"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="224" y="13"/>
         </scene>
