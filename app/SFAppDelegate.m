@@ -40,28 +40,43 @@
     UIStoryboard*  storyboard = [UIStoryboard storyboardWithName:@"Storyboard" bundle:nil];
     
     SFHomeViewController *homeViewController = [storyboard instantiateViewControllerWithIdentifier:@"Home"];
-    homeViewController.tabBarItem.image = [UIImage imageNamed:@"home.png"];
-    homeViewController.title = @"Home";
+    homeViewController.title = @"About";
+    UIImage *selectedImage4 = [[UIImage imageNamed:@"info-active.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    homeViewController.tabBarItem.selectedImage = selectedImage4;
+    homeViewController.tabBarItem.image = [UIImage imageNamed:@"info.png"];
+    [homeViewController.tabBarItem setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:
+                                                            [UIColor blackColor], UITextAttributeTextColor,
+                                                            nil] forState:UIControlStateSelected];
+
     
     SFVideoListViewController *fieldViewController = [storyboard instantiateViewControllerWithIdentifier:@"VideoList"];
-    fieldViewController.tabBarItem.image = [UIImage imageNamed:@"field.png"];
-    fieldViewController.title = @"Field";
-    UINavigationController *fieldNavController = [[UINavigationController alloc] initWithRootViewController:fieldViewController];
-    fieldNavController.navigationBarHidden = YES;
+    fieldViewController.tabBarItem.title = @"Field";
+    UIImage *selectedImage = [[UIImage imageNamed:@"sun-active.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    fieldViewController.tabBarItem.selectedImage = selectedImage;
+    fieldViewController.tabBarItem.image = [UIImage imageNamed:@"sun.png"];
+    [fieldViewController.tabBarItem setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:
+                                               [UIColor blackColor], UITextAttributeTextColor,
+                                               nil] forState:UIControlStateSelected];
     
     SFVideoListViewController *officeViewController = [storyboard instantiateViewControllerWithIdentifier:@"VideoList"];
-    officeViewController.tabBarItem.image = [UIImage imageNamed:@"office.png"];
     officeViewController.title = @"Office";
-    UINavigationController *officeNavController = [[UINavigationController alloc] initWithRootViewController:officeViewController];
-    officeNavController.navigationBarHidden = YES;
+    UIImage *selectedImage2 = [[UIImage imageNamed:@"lamp-active.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    officeViewController.tabBarItem.selectedImage = selectedImage2;
+    officeViewController.tabBarItem.image = [UIImage imageNamed:@"lamp.png"];
+    [officeViewController.tabBarItem setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:
+                                                            [UIColor blackColor], UITextAttributeTextColor,
+                                                            nil] forState:UIControlStateSelected];
     
     SFVideoListViewController *targetViewController = [storyboard instantiateViewControllerWithIdentifier:@"VideoList"];
-    targetViewController.tabBarItem.image = [UIImage imageNamed:@"target.png"];
     targetViewController.title = @"Target Areas";
-    UINavigationController *targetNavController = [[UINavigationController alloc] initWithRootViewController:targetViewController];
-    targetNavController.navigationBarHidden = YES;
+    UIImage *selectedImage3 = [[UIImage imageNamed:@"target-active.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    targetViewController.tabBarItem.selectedImage = selectedImage3;
+    targetViewController.tabBarItem.image = [UIImage imageNamed:@"target.png"];
+    [targetViewController.tabBarItem setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:
+                                                            [UIColor blackColor], UITextAttributeTextColor,
+                                                            nil] forState:UIControlStateSelected];
 
-    self.tabBarController.viewControllers = [NSArray arrayWithObjects:homeViewController, fieldNavController, officeNavController, targetNavController, nil];
+    self.tabBarController.viewControllers = [NSArray arrayWithObjects:fieldViewController, officeViewController, targetViewController, homeViewController, nil];
     
     self.window = [[UIWindow alloc] initWithFrame:UIScreen.mainScreen.bounds];
     self.window.rootViewController = self.tabBarController;

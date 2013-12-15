@@ -20,6 +20,22 @@
 		743D7B6D157DA60100084B67 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 743D7B6C157DA60100084B67 /* CoreGraphics.framework */; };
 		AB42526E180C5166009DA224 /* XCDYouTubeVideoPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB42526D180C5166009DA224 /* XCDYouTubeVideoPlayerViewController.m */; };
 		AB42526F180C5166009DA224 /* XCDYouTubeVideoPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB42526D180C5166009DA224 /* XCDYouTubeVideoPlayerViewController.m */; };
+		AB694843185E63EB00D31103 /* lamp-active.png in Resources */ = {isa = PBXBuildFile; fileRef = AB694842185E63EB00D31103 /* lamp-active.png */; };
+		AB694847185E63F600D31103 /* lamp-active@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AB694844185E63F600D31103 /* lamp-active@2x.png */; };
+		AB694848185E63F600D31103 /* lamp.png in Resources */ = {isa = PBXBuildFile; fileRef = AB694845185E63F600D31103 /* lamp.png */; };
+		AB694849185E63F600D31103 /* lamp@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AB694846185E63F600D31103 /* lamp@2x.png */; };
+		AB694854185E63FE00D31103 /* sun-active.png in Resources */ = {isa = PBXBuildFile; fileRef = AB69484B185E63FE00D31103 /* sun-active.png */; };
+		AB694855185E63FE00D31103 /* sun-active@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AB69484C185E63FE00D31103 /* sun-active@2x.png */; };
+		AB694856185E63FE00D31103 /* sun.png in Resources */ = {isa = PBXBuildFile; fileRef = AB69484D185E63FE00D31103 /* sun.png */; };
+		AB694857185E63FE00D31103 /* sun@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AB69484E185E63FE00D31103 /* sun@2x.png */; };
+		AB694858185E63FE00D31103 /* target-active.png in Resources */ = {isa = PBXBuildFile; fileRef = AB69484F185E63FE00D31103 /* target-active.png */; };
+		AB694859185E63FE00D31103 /* target-active@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AB694850185E63FE00D31103 /* target-active@2x.png */; };
+		AB69485A185E63FE00D31103 /* target.png in Resources */ = {isa = PBXBuildFile; fileRef = AB694851185E63FE00D31103 /* target.png */; };
+		AB69485B185E63FE00D31103 /* target@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AB694852185E63FE00D31103 /* target@2x.png */; };
+		AB694860185E6CDD00D31103 /* info-active.png in Resources */ = {isa = PBXBuildFile; fileRef = AB69485C185E6CDD00D31103 /* info-active.png */; };
+		AB694861185E6CDD00D31103 /* info-active@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AB69485D185E6CDD00D31103 /* info-active@2x.png */; };
+		AB694862185E6CDD00D31103 /* info.png in Resources */ = {isa = PBXBuildFile; fileRef = AB69485E185E6CDD00D31103 /* info.png */; };
+		AB694863185E6CDD00D31103 /* info@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AB69485F185E6CDD00D31103 /* info@2x.png */; };
 		AB86FAF617FF634500D9637E /* SFHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB86FAF517FF634500D9637E /* SFHomeViewController.m */; };
 		AB86FAF817FF634B00D9637E /* SFAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AB86FAF717FF634B00D9637E /* SFAppDelegate.m */; };
 		AB86FAFD17FF638400D9637E /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AB86FAFA17FF638400D9637E /* Default-568h@2x.png */; };
@@ -64,8 +80,6 @@
 		AB8CB97A18046A6E0068964B /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB8CB97818046A680068964B /* AVFoundation.framework */; };
 		AB8CB97C18046EA20068964B /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB8CB97B18046EA20068964B /* CoreMedia.framework */; };
 		AB8CB97D18046EA80068964B /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB8CB97B18046EA20068964B /* CoreMedia.framework */; };
-		AB8CB98018047CD60068964B /* SFVideoPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8CB97F18047CD60068964B /* SFVideoPlayerViewController.m */; };
-		AB8CB98118047CD60068964B /* SFVideoPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8CB97F18047CD60068964B /* SFVideoPlayerViewController.m */; };
 		ABA0AEB6180DAD28009D3568 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABA0AEB5180DAD28009D3568 /* StoreKit.framework */; };
 		ABA0AEB7180DAD3B009D3568 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABA0AEB5180DAD28009D3568 /* StoreKit.framework */; };
 		ABAB76C018061EE2006689E9 /* SFIntroViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABAB76BF18061EE2006689E9 /* SFIntroViewController.m */; };
@@ -95,6 +109,22 @@
 		97E18B1E1624CB5700B17A67 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		AB42526C180C5166009DA224 /* XCDYouTubeVideoPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCDYouTubeVideoPlayerViewController.h; sourceTree = SOURCE_ROOT; };
 		AB42526D180C5166009DA224 /* XCDYouTubeVideoPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCDYouTubeVideoPlayerViewController.m; sourceTree = SOURCE_ROOT; };
+		AB694842185E63EB00D31103 /* lamp-active.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lamp-active.png"; sourceTree = SOURCE_ROOT; };
+		AB694844185E63F600D31103 /* lamp-active@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lamp-active@2x.png"; sourceTree = SOURCE_ROOT; };
+		AB694845185E63F600D31103 /* lamp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lamp.png; sourceTree = SOURCE_ROOT; };
+		AB694846185E63F600D31103 /* lamp@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lamp@2x.png"; sourceTree = SOURCE_ROOT; };
+		AB69484B185E63FE00D31103 /* sun-active.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sun-active.png"; sourceTree = SOURCE_ROOT; };
+		AB69484C185E63FE00D31103 /* sun-active@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sun-active@2x.png"; sourceTree = SOURCE_ROOT; };
+		AB69484D185E63FE00D31103 /* sun.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sun.png; sourceTree = SOURCE_ROOT; };
+		AB69484E185E63FE00D31103 /* sun@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sun@2x.png"; sourceTree = SOURCE_ROOT; };
+		AB69484F185E63FE00D31103 /* target-active.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "target-active.png"; sourceTree = SOURCE_ROOT; };
+		AB694850185E63FE00D31103 /* target-active@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "target-active@2x.png"; sourceTree = SOURCE_ROOT; };
+		AB694851185E63FE00D31103 /* target.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = target.png; sourceTree = SOURCE_ROOT; };
+		AB694852185E63FE00D31103 /* target@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "target@2x.png"; sourceTree = SOURCE_ROOT; };
+		AB69485C185E6CDD00D31103 /* info-active.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "info-active.png"; sourceTree = SOURCE_ROOT; };
+		AB69485D185E6CDD00D31103 /* info-active@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "info-active@2x.png"; sourceTree = SOURCE_ROOT; };
+		AB69485E185E6CDD00D31103 /* info.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = info.png; sourceTree = SOURCE_ROOT; };
+		AB69485F185E6CDD00D31103 /* info@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "info@2x.png"; sourceTree = SOURCE_ROOT; };
 		AB86FAF417FF633300D9637E /* SFHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SFHomeViewController.h; path = app/SFHomeViewController.h; sourceTree = SOURCE_ROOT; };
 		AB86FAF517FF634500D9637E /* SFHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SFHomeViewController.m; path = app/SFHomeViewController.m; sourceTree = SOURCE_ROOT; };
 		AB86FAF717FF634B00D9637E /* SFAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SFAppDelegate.m; path = app/SFAppDelegate.m; sourceTree = SOURCE_ROOT; };
@@ -119,8 +149,6 @@
 		AB8CB975180467A20068964B /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		AB8CB97818046A680068964B /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		AB8CB97B18046EA20068964B /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
-		AB8CB97E18047CD60068964B /* SFVideoPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFVideoPlayerViewController.h; sourceTree = SOURCE_ROOT; };
-		AB8CB97F18047CD60068964B /* SFVideoPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFVideoPlayerViewController.m; sourceTree = SOURCE_ROOT; };
 		ABA0AEB5180DAD28009D3568 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		ABAB76BE18061EE2006689E9 /* SFIntroViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFIntroViewController.h; sourceTree = SOURCE_ROOT; };
 		ABAB76BF18061EE2006689E9 /* SFIntroViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFIntroViewController.m; sourceTree = SOURCE_ROOT; };
@@ -226,6 +254,7 @@
 		09ABC07713A1D52D009C3FCF /* Stretch&Flex */ = {
 			isa = PBXGroup;
 			children = (
+				AB694841185E4E3700D31103 /* Images */,
 				AB86FB2C17FF6C0A00D9637E /* Storyboard.storyboard */,
 				AB86FAF917FF635200D9637E /* SFAppDelegate.h */,
 				AB86FAF717FF634B00D9637E /* SFAppDelegate.m */,
@@ -254,6 +283,29 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		AB694841185E4E3700D31103 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				AB69485C185E6CDD00D31103 /* info-active.png */,
+				AB69485D185E6CDD00D31103 /* info-active@2x.png */,
+				AB69485E185E6CDD00D31103 /* info.png */,
+				AB69485F185E6CDD00D31103 /* info@2x.png */,
+				AB694842185E63EB00D31103 /* lamp-active.png */,
+				AB694844185E63F600D31103 /* lamp-active@2x.png */,
+				AB694845185E63F600D31103 /* lamp.png */,
+				AB694846185E63F600D31103 /* lamp@2x.png */,
+				AB69484B185E63FE00D31103 /* sun-active.png */,
+				AB69484C185E63FE00D31103 /* sun-active@2x.png */,
+				AB69484D185E63FE00D31103 /* sun.png */,
+				AB69484E185E63FE00D31103 /* sun@2x.png */,
+				AB69484F185E63FE00D31103 /* target-active.png */,
+				AB694850185E63FE00D31103 /* target-active@2x.png */,
+				AB694851185E63FE00D31103 /* target.png */,
+				AB694852185E63FE00D31103 /* target@2x.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
 		ABA0AEAF180DA9D7009D3568 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -265,8 +317,6 @@
 				ABAB76BF18061EE2006689E9 /* SFIntroViewController.m */,
 				AB86FB3317FF724700D9637E /* SFVideoListViewController.h */,
 				AB86FB3417FF724700D9637E /* SFVideoListViewController.m */,
-				AB8CB97E18047CD60068964B /* SFVideoPlayerViewController.h */,
-				AB8CB97F18047CD60068964B /* SFVideoPlayerViewController.m */,
 				AB42526C180C5166009DA224 /* XCDYouTubeVideoPlayerViewController.h */,
 				AB42526D180C5166009DA224 /* XCDYouTubeVideoPlayerViewController.m */,
 			);
@@ -373,12 +423,28 @@
 			buildActionMask = 2147483647;
 			files = (
 				AB86FB0317FF639600D9637E /* Entitlements.plist in Resources */,
+				AB69485B185E63FE00D31103 /* target@2x.png in Resources */,
+				AB694848185E63F600D31103 /* lamp.png in Resources */,
+				AB694862185E6CDD00D31103 /* info.png in Resources */,
+				AB694847185E63F600D31103 /* lamp-active@2x.png in Resources */,
+				AB69485A185E63FE00D31103 /* target.png in Resources */,
+				AB694855185E63FE00D31103 /* sun-active@2x.png in Resources */,
 				AB86FB0C17FF649900D9637E /* InfoPlist.strings in Resources */,
+				AB694860185E6CDD00D31103 /* info-active.png in Resources */,
+				AB694854185E63FE00D31103 /* sun-active.png in Resources */,
+				AB694858185E63FE00D31103 /* target-active.png in Resources */,
 				AB86FAFF17FF638400D9637E /* Default@2x.png in Resources */,
 				AB86FAFE17FF638400D9637E /* Default.png in Resources */,
 				AB86FB2D17FF6C0A00D9637E /* Storyboard.storyboard in Resources */,
+				AB694843185E63EB00D31103 /* lamp-active.png in Resources */,
+				AB694861185E6CDD00D31103 /* info-active@2x.png in Resources */,
 				AB86FAFD17FF638400D9637E /* Default-568h@2x.png in Resources */,
 				AB86FB0117FF638F00D9637E /* Stretch&Flex-Info.plist in Resources */,
+				AB694859185E63FE00D31103 /* target-active@2x.png in Resources */,
+				AB694856185E63FE00D31103 /* sun.png in Resources */,
+				AB694857185E63FE00D31103 /* sun@2x.png in Resources */,
+				AB694849185E63F600D31103 /* lamp@2x.png in Resources */,
+				AB694863185E6CDD00D31103 /* info@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -406,7 +472,6 @@
 				AB86FAF817FF634B00D9637E /* SFAppDelegate.m in Sources */,
 				AB86FB3517FF724700D9637E /* SFVideoListViewController.m in Sources */,
 				AB86FB0617FF63B200D9637E /* main.m in Sources */,
-				AB8CB98018047CD60068964B /* SFVideoPlayerViewController.m in Sources */,
 				AB8CB973180352940068964B /* Video.m in Sources */,
 				AB42526E180C5166009DA224 /* XCDYouTubeVideoPlayerViewController.m in Sources */,
 				AB86FAF617FF634500D9637E /* SFHomeViewController.m in Sources */,
@@ -423,7 +488,6 @@
 				AB86FB0F17FF682000D9637E /* SFAppDelegate.m in Sources */,
 				AB86FB3617FF724700D9637E /* SFVideoListViewController.m in Sources */,
 				AB86FB1017FF682000D9637E /* main.m in Sources */,
-				AB8CB98118047CD60068964B /* SFVideoPlayerViewController.m in Sources */,
 				AB8CB974180352940068964B /* Video.m in Sources */,
 				AB42526F180C5166009DA224 /* XCDYouTubeVideoPlayerViewController.m in Sources */,
 				AB86FB1117FF682000D9637E /* SFHomeViewController.m in Sources */,

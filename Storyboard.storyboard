@@ -14,7 +14,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="85" sectionHeaderHeight="22" sectionFooterHeight="22" id="ogB-Ff-txP">
-                                <rect key="frame" x="0.0" y="43" width="320" height="525"/>
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -100,10 +100,43 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Introduction" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="M9r-LX-G6X">
+                                <rect key="frame" x="0.0" y="22" width="320" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Disclaimer" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="HFg-Lb-HOb">
+                                <rect key="frame" x="0.0" y="259" width="320" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" id="E1y-to-e9C">
+                                <rect key="frame" x="0.0" y="280" width="320" height="220"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <string key="text">The suggestions and techniques presented in this Application are meant to supplement, and not be a substitute for professional medical advice from a doctor or health care professional.
+
+You should consult your physician or other health care professional before starting any fitness program. If you experience faintness, dizziness, pain or shortness of breath at any time while exercising you should stop immediately.
+</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" id="xWV-8G-BTV">
+                                <rect key="frame" x="0.0" y="42" width="320" height="189"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <string key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus at adipiscing leo, sed venenatis odio. Etiam tellus erat, tempor auctor ligula nec, dictum blandit urna. Integer vel enim tempus, malesuada nunc et, dapibus libero. Quisque a arcu venenatis, molestie erat vel, bibendum augue. Duis ac velit nec neque venenatis eleifend eget sit amet nunc. Fusce nunc risus, pharetra tincidunt augue gravida, sagittis adipiscing quam. </string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Ukd-VM-XZo">
-                                <rect key="frame" x="31" y="181" width="259" height="30"/>
+                                <rect key="frame" x="0.0" y="221" width="320" height="30"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Introduction">
+                                <state key="normal" title="Read More">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -111,9 +144,9 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="3Bb-1h-T7E">
-                                <rect key="frame" x="31" y="231" width="259" height="30"/>
+                                <rect key="frame" x="0.0" y="483" width="320" height="30"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Disclaimer">
+                                <state key="normal" title="Read More">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -209,13 +242,13 @@ Nulla venenatis sapien id tempor tempor. Nulla consequat porttitor placerat. Int
                                 <rect key="frame" x="0.0" y="64" width="320" height="458"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <mutableString key="text">The suggestions and techniques presented in this Application are meant to supplement, and not be a substitute for professional medical advice from a doctor or health care professional.
+                                <string key="text">The suggestions and techniques presented in this Application are meant to supplement, and not be a substitute for professional medical advice from a doctor or health care professional.
 
 You should consult your physician or other health care professional before starting any fitness program. If you experience faintness, dizziness, pain or shortness of breath at any time while exercising you should stop immediately.
 
 You should not use the information in this Application as a substitute for, nor does it replace, professional medical advice, diagnosis or treatment. If you have any concerns or questions about your health, you should always consult with a physician or health care professional.
 
-The use of any information provided on this Application is solely at your own risk. We assume no responsibility for injuries suffered while practicing these techniques. We do not recommend these movements if you are pregnant or under 18 years of age.</mutableString>
+The use of any information provided on this Application is solely at your own risk. We assume no responsibility for injuries suffered while practicing these techniques. We do not recommend these movements if you are pregnant or under 18 years of age.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -242,56 +275,6 @@ The use of any information provided on this Application is solely at your own ri
                 <placeholder placeholderIdentifier="IBFirstResponder" id="35G-dz-sAs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1080" y="13"/>
-        </scene>
-        <!--Video Player View Controller-->
-        <scene sceneID="1ar-wc-U6W">
-            <objects>
-                <viewController id="fUJ-8I-clT" customClass="SFVideoPlayerViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="FWI-5f-evf">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <webView contentMode="scaleToFill" id="6nJ-gH-E7r">
-                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <gestureRecognizers/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="ydY-Sj-Xxj" appends="YES" id="FEC-k8-nAs"/>
-                                </connections>
-                            </webView>
-                            <navigationBar contentMode="scaleToFill" id="rie-WF-ZlZ">
-                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <items>
-                                    <navigationItem id="qIP-On-HpF">
-                                        <barButtonItem key="rightBarButtonItem" title="Done" id="WcV-9o-FoK">
-                                            <connections>
-                                                <action selector="doneButtonPressed:" destination="fUJ-8I-clT" id="DXw-EX-WSv"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                                <connections>
-                                    <outlet property="delegate" destination="fUJ-8I-clT" id="beE-XI-DK5"/>
-                                </connections>
-                            </navigationBar>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                    <connections>
-                        <outlet property="navBar" destination="rie-WF-ZlZ" id="mmH-Dx-xYf"/>
-                        <outlet property="webView" destination="6nJ-gH-E7r" id="upI-pO-7Wv"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ByN-8h-CAG" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="ydY-Sj-Xxj">
-                    <connections>
-                        <action selector="handleTapGesture:" destination="fUJ-8I-clT" id="O5W-MH-Jhb"/>
-                    </connections>
-                </tapGestureRecognizer>
-            </objects>
-            <point key="canvasLocation" x="1416" y="716"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

@@ -11,7 +11,6 @@
 #import "SFAppDelegate.h"
 #import "SFVideoListCell.h"
 #import "SFVideoListViewController.h"
-#import "SFVideoPlayerViewController.h"
 #import <AVFoundation/AVFoundation.h>
 #import <MediaPlayer/MediaPlayer.h>
 #import <Parse/Parse.h>
@@ -202,13 +201,6 @@
         XCDYouTubeVideoPlayerViewController *target = [[XCDYouTubeVideoPlayerViewController alloc] initWithVideoIdentifier:vid.videoID];
         [self presentMoviePlayerViewControllerAnimated:target];
     }
-}
-
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    /*SFVideoPlayerViewController *target = (SFVideoPlayerViewController*)[segue destinationViewController];
-    Video *vid = [_videoArr objectAtIndex:self.tableView.indexPathForSelectedRow.row];
-    target.video = vid;*/
 }
 
 - (void)showAppWithIdentifier:(NSString *)identifier
