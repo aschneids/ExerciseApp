@@ -45,7 +45,7 @@
     homeViewController.tabBarItem.selectedImage = selectedImage4;
     homeViewController.tabBarItem.image = [UIImage imageNamed:@"info.png"];
     [homeViewController.tabBarItem setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:
-                                                            [UIColor blackColor], UITextAttributeTextColor,
+                                                            [UIColor blackColor], NSForegroundColorAttributeName,
                                                             nil] forState:UIControlStateSelected];
 
     
@@ -55,7 +55,7 @@
     fieldViewController.tabBarItem.selectedImage = selectedImage;
     fieldViewController.tabBarItem.image = [UIImage imageNamed:@"sun.png"];
     [fieldViewController.tabBarItem setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:
-                                               [UIColor blackColor], UITextAttributeTextColor,
+                                               [UIColor blackColor], NSForegroundColorAttributeName,
                                                nil] forState:UIControlStateSelected];
     
     SFVideoListViewController *officeViewController = [storyboard instantiateViewControllerWithIdentifier:@"VideoList"];
@@ -64,7 +64,7 @@
     officeViewController.tabBarItem.selectedImage = selectedImage2;
     officeViewController.tabBarItem.image = [UIImage imageNamed:@"lamp.png"];
     [officeViewController.tabBarItem setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:
-                                                            [UIColor blackColor], UITextAttributeTextColor,
+                                                            [UIColor blackColor], NSForegroundColorAttributeName,
                                                             nil] forState:UIControlStateSelected];
     
     SFVideoListViewController *targetViewController = [storyboard instantiateViewControllerWithIdentifier:@"VideoList"];
@@ -73,7 +73,7 @@
     targetViewController.tabBarItem.selectedImage = selectedImage3;
     targetViewController.tabBarItem.image = [UIImage imageNamed:@"target.png"];
     [targetViewController.tabBarItem setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:
-                                                            [UIColor blackColor], UITextAttributeTextColor,
+                                                            [UIColor blackColor], NSForegroundColorAttributeName,
                                                             nil] forState:UIControlStateSelected];
 
     self.tabBarController.viewControllers = [NSArray arrayWithObjects:fieldViewController, officeViewController, targetViewController, homeViewController, nil];
