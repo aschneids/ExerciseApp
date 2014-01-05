@@ -35,6 +35,11 @@
     if([[NSUserDefaults standardUserDefaults] boolForKey:@"hasAgreed"] == NO) {
         [self performSegueWithIdentifier:@"Disclaimer" sender:self];
     }
+    
+    CGSize scrollableSize = CGSizeMake(self.introScrollView.frame.size.width, self.introScrollView.frame.size.height);
+    CGSize scrollableSize2 = CGSizeMake(self.disclaimerScrollView.frame.size.width, self.disclaimerScrollView.frame.size.height);
+    [self.introScrollView setContentSize:scrollableSize];
+    [self.disclaimerScrollView setContentSize:scrollableSize2];
 }
 
 
@@ -43,9 +48,9 @@
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
-- (IBAction)swipeRight:(id)sender {
+- (IBAction)swipeLeft:(id)sender {
     SFAppDelegate *appDelegate = (SFAppDelegate *)[[UIApplication sharedApplication] delegate];
-    appDelegate.tabBarController.selectedIndex++;
+    appDelegate.tabBarController.selectedIndex--;
 }
 
 @end

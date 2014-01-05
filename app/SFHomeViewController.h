@@ -8,6 +8,9 @@
 
 @interface SFHomeViewController : UIViewController
 
-- (IBAction)swipeRight:(id)sender;
+@property (weak, nonatomic) IBOutlet UITextView *introScrollView;
+@property (weak, nonatomic) IBOutlet UITextView *disclaimerScrollView;
+
+- (IBAction)swipeLeft:(id)sender;
 
 @end
