@@ -189,40 +189,57 @@
     return cell;
 }
 
+- (void)requestFullVersionProductData
+{
+    NSSet *productIdentifiers = [NSSet setWithObject:@"com.Lunde.Stretch-Flex.fullVersion" ];
+    SKProductsRequest *productsRequest = [[SKProductsRequest alloc] initWithProductIdentifiers:productIdentifiers];
+    productsRequest.delegate = self;
+    [productsRequest start];
+}
+
+#pragma mark SKProductsRequestDelegate methods
+
+- (void)productsRequest:(SKProductsRequest *)request didReceiveResponse:(SKProductsResponse *)response
+{
+    NSArray *products = response.products;
+    SKProduct *fullVersion = [products count] == 1 ? [products firstObject] : nil;
+    if (fullVersion)
+    {
+        NSLog(@"Product title: %@" , fullVersion.localizedTitle);
+        NSLog(@"Product description: %@" , fullVersion.localizedDescription);
+        NSLog(@"Product price: %@" , fullVersion.price);
+        NSLog(@"Product id: %@" , fullVersion.productIdentifier);
+    }
+    
+    for (NSString *invalidProductId in response.invalidProductIdentifiers)
+    {
+        NSLog(@"Invalid product id: %@" , invalidProductId);
+    }
+}
 
 #pragma mark - Navigation
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     Video *vid = [_videoArr objectAtIndex:self.tableView.indexPathForSelectedRow.row];
-    if ([SFAppDelegate isLiteVersion] && vid.isAvailableInLite == NO) {
-        [self showAppWithIdentifier:@"669186589"];
-    } else {
+//    if (vid.isAvailableInLite == NO) {
+//        [self requestFullVersionProductData];
+//    } else {
         XCDYouTubeVideoPlayerViewController *target = [[XCDYouTubeVideoPlayerViewController alloc] initWithVideoIdentifier:vid.videoID];
         [self presentMoviePlayerViewControllerAnimated:target];
-    }
+//    }
 }
 
-- (void)showAppWithIdentifier:(NSString *)identifier
-{
-    SKStoreProductViewController *storeViewController = [[SKStoreProductViewController alloc] init];
-    
-    storeViewController.delegate = self;
-    
-    NSDictionary *parameters = @{SKStoreProductParameterITunesItemIdentifier:identifier};
-    
-    [storeViewController loadProductWithParameters:parameters
-                                   completionBlock:^(BOOL result, NSError *error) {
-                                       if (result)
-                                           [self presentViewController:storeViewController animated:YES completion:nil];
-                                   }];
+- (IBAction)swipeLeft:(id)sender {
+    SFAppDelegate *appDelegate = (SFAppDelegate *)[[UIApplication sharedApplication] delegate];
+    if (appDelegate.tabBarController.selectedIndex == 0) return;
+    appDelegate.tabBarController.selectedIndex--;
 }
 
-#pragma mark SKStoreProductViewControllerDelegate
-
--(void)productViewControllerDidFinish:(SKStoreProductViewController *)viewController
-{
-    [viewController dismissViewControllerAnimated:YES completion:nil];
+- (IBAction)swipeRight:(id)sender {
+    SFAppDelegate *appDelegate = (SFAppDelegate *)[[UIApplication sharedApplication] delegate];
+    if (appDelegate.tabBarController.selectedIndex == 3) return;
+    appDelegate.tabBarController.selectedIndex++;
 }
 
 #pragma mark - Notifications
@@ -293,19 +310,6 @@
 - (void) videoPlayerViewControllerDidReceiveMetadata:(NSNotification *)notification
 {
 	NSLog(@"Metadata: %@", notification.userInfo);
-}
-
-
-- (IBAction)swipeLeft:(id)sender {
-    SFAppDelegate *appDelegate = (SFAppDelegate *)[[UIApplication sharedApplication] delegate];
-    if (appDelegate.tabBarController.selectedIndex == 0) return;
-    appDelegate.tabBarController.selectedIndex--;
-}
-
-- (IBAction)swipeRight:(id)sender {
-    SFAppDelegate *appDelegate = (SFAppDelegate *)[[UIApplication sharedApplication] delegate];
-    if (appDelegate.tabBarController.selectedIndex == 3) return;
-    appDelegate.tabBarController.selectedIndex++;
 }
 
 @end

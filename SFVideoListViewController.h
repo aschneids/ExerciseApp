@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <StoreKit/StoreKit.h>
 
-@interface SFVideoListViewController : UIViewController <SKStoreProductViewControllerDelegate, UITableViewDelegate, UITableViewDataSource>
+@interface SFVideoListViewController : UIViewController <SKProductsRequestDelegate, UITableViewDelegate, UITableViewDataSource>
 
 @property (weak, nonatomic) IBOutlet UITabBarItem *tabItem;
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
