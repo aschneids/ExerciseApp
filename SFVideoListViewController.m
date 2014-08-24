@@ -311,4 +311,8 @@
 	NSLog(@"Metadata: %@", notification.userInfo);
 }
 
+-(UIStatusBarStyle)preferredStatusBarStyle{
+    return UIStatusBarStyleLightContent;
+}
+
 @end
