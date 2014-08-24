@@ -23,25 +23,17 @@
     return self;
 }
 
-- (void)viewDidLoad
+- (void)viewDidLayoutSubviews
 {
-    [super viewDidLoad];
-	// Do any additional setup after loading the view.
-    
+    [super viewDidLayoutSubviews];
     if([[NSUserDefaults standardUserDefaults] boolForKey:@"hasAgreed"] == NO) {
         self.navItem.rightBarButtonItem = nil;
     } else {
         self.agreeButton.hidden = YES;
         CGRect frame = self.textView.frame;
-        frame.size.height += self.agreeButton.frame.size.height;
+        frame.size.height = self.view.bounds.size.height - frame.origin.y;
         self.textView.frame = frame;
     }
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 - (IBAction)doneButtonTapped:(id)sender {

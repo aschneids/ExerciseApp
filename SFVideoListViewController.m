@@ -19,7 +19,6 @@
 
     NSMutableArray *_videoArr;
     UIActivityIndicatorView *_activityIndicator;
-    BOOL firstLoad;
 }
 @end
 
@@ -28,7 +27,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    firstLoad = YES;
     self.titleLabel.text = self.tabBarItem.title;
     
     NSNotificationCenter *defaultCenter = [NSNotificationCenter defaultCenter];
@@ -44,12 +42,13 @@
     [_activityIndicator startAnimating];
     
     [self downloadVideoData];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(checkForVideoUpdates) name:UIApplicationWillEnterForegroundNotification object:nil];
 }
 
-- (void)viewDidAppear:(BOOL)animated
+- (void)dealloc
 {
-    if (!firstLoad) [self checkForVideoUpdates];
-    firstLoad = NO;
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 - (void)didReceiveMemoryWarning

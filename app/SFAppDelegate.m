@@ -77,6 +77,7 @@
                                                             nil] forState:UIControlStateSelected];
 
     self.tabBarController.viewControllers = [NSArray arrayWithObjects:fieldViewController, officeViewController, targetViewController, homeViewController, nil];
+    self.tabBarController.selectedViewController = homeViewController;
     
     self.window = [[UIWindow alloc] initWithFrame:UIScreen.mainScreen.bounds];
     self.window.rootViewController = self.tabBarController;

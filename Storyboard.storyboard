@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13A603" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
         <!--Video List View Controller - Item-->
@@ -63,10 +63,11 @@
                                 <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.14901960784313725" green="0.47843137254901957" blue="0.76862745098039209" alpha="1" colorSpace="calibratedRGB"/>
                         <gestureRecognizers/>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="Aht-hO-n4s" appends="YES" id="owJ-Nx-PGu"/>
@@ -115,10 +116,11 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E1y-to-e9C">
-                                <rect key="frame" x="0.0" y="287" width="320" height="192"/>
+                                <rect key="frame" x="10" y="286.99999865998205" width="300" height="192"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="bFp-Gq-6Q9"/>
                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="200" id="vk6-r2-ezF"/>
                                 </constraints>
                                 <string key="text">The suggestions and techniques presented in this Application are meant to supplement, and not be a substitute for professional medical advice from a doctor or health care professional.
@@ -129,19 +131,20 @@ You should consult your physician or other health care professional before start
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xWV-8G-BTV">
-                                <rect key="frame" x="0.0" y="42" width="320" height="203"/>
+                                <rect key="frame" x="10" y="42" width="300" height="203"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="200" id="bo5-He-ndw"/>
+                                    <constraint firstAttribute="width" constant="300" id="jNj-Zz-1Ah"/>
                                 </constraints>
-                                <mutableString key="text">Workplace Evolution, L.L.C. wants you to start the work day right! 
+                                <string key="text">Workplace Evolution, L.L.C. wants you to start the work day right! 
 
 Construction workers, industrial employees and office personnel can benefit from these guided and timed stretching routines.
 
 Each progressive module demonstrates and announces the proper, pain-free way to elongate and prepare muscles to handle the exposures of the job site, plant or workstation. 
 
-Stretch &amp;Flex leaders can start by selecting from three categories: Field stretches, Office stretches or Target Area stretches. Each category has several different 7-10 minute modules; the modules get progressively more challenging. We recommend that you switch to the next module when you are ready; for most groups this occurs within two weeks. Turn up the volume, select the module and set the phone or tablet down to lead the crews while the Stretch &amp; Flex App walks &amp; talks you through the regiment. Repeat Daily!</mutableString>
+Stretch &amp;Flex leaders can start by selecting from three categories: Field stretches, Office stretches or Target Area stretches. Each category has several different 7-10 minute modules; the modules get progressively more challenging. We recommend that you switch to the next module when you are ready; for most groups this occurs within two weeks. Turn up the volume, select the module and set the phone or tablet down to lead the crews while the Stretch &amp; Flex App walks &amp; talks you through the regiment. Repeat Daily!</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -217,10 +220,13 @@ Stretch &amp;Flex leaders can start by selecting from three categories: Field st
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eu6-Oy-mrk">
-                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eu6-Oy-mrk">
+                                <rect key="frame" x="10" y="66" width="300" height="502"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="502" id="cTc-gK-gUY"/>
+                                </constraints>
                                 <mutableString key="text">Workplace Evolution, L.L.C. wants you to start the work day right! 
 
 Construction workers, industrial employees and office personnel can benefit from these guided and timed stretching routines.
@@ -249,6 +255,10 @@ Stretch &amp;Flex leaders can start by selecting from three categories: Field st
                             </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="eu6-Oy-mrk" firstAttribute="top" secondItem="ymM-F4-IGx" secondAttribute="top" constant="66" id="gER-lC-FEN"/>
+                            <constraint firstAttribute="bottom" secondItem="eu6-Oy-mrk" secondAttribute="bottom" id="yTC-Me-uqW"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B37-Y7-IH6" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -283,8 +293,8 @@ Stretch &amp;Flex leaders can start by selecting from three categories: Field st
                                     <outlet property="delegate" destination="Q9d-wY-U7p" id="oZ3-Vh-Utd"/>
                                 </connections>
                             </navigationBar>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3BT-jt-8MZ">
-                                <rect key="frame" x="0.0" y="64" width="320" height="458"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3BT-jt-8MZ">
+                                <rect key="frame" x="10" y="66" width="300" height="456"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <string key="text">The suggestions and techniques presented in this Application are meant to supplement, and not be a substitute for professional medical advice from a doctor or health care professional.
@@ -297,8 +307,8 @@ The use of any information provided on this Application is solely at your own ri
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5xD-Br-1nW">
-                                <rect key="frame" x="94" y="523" width="132" height="45"/>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5xD-Br-1nW">
+                                <rect key="frame" x="94" y="532" width="132" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <state key="normal" title="I Agree">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -309,6 +319,11 @@ The use of any information provided on this Application is solely at your own ri
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="3BT-jt-8MZ" firstAttribute="top" secondItem="3VZ-y4-2fb" secondAttribute="top" constant="66" id="Jq4-SR-DhT"/>
+                            <constraint firstAttribute="bottom" secondItem="3BT-jt-8MZ" secondAttribute="bottom" constant="46" id="PtP-sz-caa"/>
+                            <constraint firstAttribute="bottom" secondItem="5xD-Br-1nW" secondAttribute="bottom" constant="7" id="rsx-XY-vYf"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="mDV-Z8-Tcr"/>
                     <connections>
