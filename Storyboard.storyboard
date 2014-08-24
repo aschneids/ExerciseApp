@@ -138,13 +138,13 @@ You should consult your physician or other health care professional before start
                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="200" id="bo5-He-ndw"/>
                                     <constraint firstAttribute="width" constant="300" id="jNj-Zz-1Ah"/>
                                 </constraints>
-                                <string key="text">Workplace Evolution, L.L.C. wants you to start the work day right! 
+                                <mutableString key="text">Athlete Evolution TM wants you to start the work day right! 
 
-Construction workers, industrial employees and office personnel can benefit from these guided and timed stretching routines.
+Construction workers, industrial employees and office personnel can benefit from these guided and timed stretching routines. 
 
 Each progressive module demonstrates and announces the proper, pain-free way to elongate and prepare muscles to handle the exposures of the job site, plant or workstation. 
 
-Stretch &amp;Flex leaders can start by selecting from three categories: Field stretches, Office stretches or Target Area stretches. Each category has several different 7-10 minute modules; the modules get progressively more challenging. We recommend that you switch to the next module when you are ready; for most groups this occurs within two weeks. Turn up the volume, select the module and set the phone or tablet down to lead the crews while the Stretch &amp; Flex App walks &amp; talks you through the regiment. Repeat Daily!</string>
+Stretch &amp;Flex leaders can start by selecting from three categories: Field stretches, Office stretches or Target Area stretches. Each category has several different 7-10 minute modules; the modules get progressively more challenging. We recommend that you switch to the next module when you are ready; for most groups this occurs within two weeks. Turn up the volume, select the module and set the phone or tablet down to lead the crews while the Stretch &amp; Flex App walks &amp; talks you through the regiment. Repeat Daily!</mutableString>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -197,6 +197,7 @@ Stretch &amp;Flex leaders can start by selecting from three categories: Field st
                     <connections>
                         <outlet property="disclaimerScrollView" destination="E1y-to-e9C" id="rFP-Kr-mSq"/>
                         <outlet property="introScrollView" destination="xWV-8G-BTV" id="SKD-38-ciL"/>
+                        <outlet property="introTextView" destination="xWV-8G-BTV" id="zoR-Zw-1BL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Soe-u9-n4J" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -227,9 +228,9 @@ Stretch &amp;Flex leaders can start by selecting from three categories: Field st
                                 <constraints>
                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="502" id="cTc-gK-gUY"/>
                                 </constraints>
-                                <mutableString key="text">Workplace Evolution, L.L.C. wants you to start the work day right! 
+                                <mutableString key="text">Athlete Evolution TM wants you to start the work day right! 
 
-Construction workers, industrial employees and office personnel can benefit from these guided and timed stretching routines.
+Construction workers, industrial employees and office personnel can benefit from these guided and timed stretching routines. 
 
 Each progressive module demonstrates and announces the proper, pain-free way to elongate and prepare muscles to handle the exposures of the job site, plant or workstation. 
 
@@ -260,6 +261,9 @@ Stretch &amp;Flex leaders can start by selecting from three categories: Field st
                             <constraint firstAttribute="bottom" secondItem="eu6-Oy-mrk" secondAttribute="bottom" id="yTC-Me-uqW"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="introTextView" destination="eu6-Oy-mrk" id="ENV-Gk-NcG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B37-Y7-IH6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

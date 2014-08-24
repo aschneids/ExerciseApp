@@ -10,22 +10,24 @@
 #import "SFHomeViewController.h"
 #import <Parse/Parse.h>
 
+@interface SFHomeViewController ()
+
+@property (weak, nonatomic) IBOutlet UITextView *introTextView;
+
+@end
+
 @implementation SFHomeViewController
-
-
-- (void)didReceiveMemoryWarning {
-    // Releases the view if it doesn't have a superview.
-    [super didReceiveMemoryWarning];
-    
-    // Release any cached data, images, etc that aren't in use.
-}
-
 
 #pragma mark - UIViewController
 
-// Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    NSMutableAttributedString *tmString = [[NSMutableAttributedString alloc] initWithString:self.introTextView.text attributes:@{NSFontAttributeName:[UIFont fontWithName:@"Helvetica" size:15.0]}];
+    NSRange tmRange = [self.introTextView.text rangeOfString:@"TM"];
+    UIFont *font = [UIFont fontWithName:@"Helvetica" size:9.0];
+    [tmString addAttributes:@{NSFontAttributeName:font} range:tmRange];
+    self.introTextView.attributedText = tmString;
 }
 
 - (void)viewDidAppear:(BOOL)animated
