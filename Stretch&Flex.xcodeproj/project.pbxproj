@@ -18,7 +18,6 @@
 		09BEF34C13D51C3F001BBCDB /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09BEF34B13D51C3F001BBCDB /* Security.framework */; };
 		2FCDD6B014A573F500295AAC /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FCDD6AF14A573F500295AAC /* QuartzCore.framework */; };
 		743D7B6D157DA60100084B67 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 743D7B6C157DA60100084B67 /* CoreGraphics.framework */; };
-		AB42526E180C5166009DA224 /* XCDYouTubeVideoPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB42526D180C5166009DA224 /* XCDYouTubeVideoPlayerViewController.m */; };
 		AB694843185E63EB00D31103 /* lamp-active.png in Resources */ = {isa = PBXBuildFile; fileRef = AB694842185E63EB00D31103 /* lamp-active.png */; };
 		AB694847185E63F600D31103 /* lamp-active@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AB694844185E63F600D31103 /* lamp-active@2x.png */; };
 		AB694848185E63F600D31103 /* lamp.png in Resources */ = {isa = PBXBuildFile; fileRef = AB694845185E63F600D31103 /* lamp.png */; };
@@ -54,6 +53,7 @@
 		ABA0AEB7180DAD3B009D3568 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABA0AEB5180DAD28009D3568 /* StoreKit.framework */; };
 		ABAB76C018061EE2006689E9 /* SFIntroViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABAB76BF18061EE2006689E9 /* SFIntroViewController.m */; };
 		ABAB76C41807174B006689E9 /* SFDisclaimerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABAB76C31807174B006689E9 /* SFDisclaimerViewController.m */; };
+		ABAF034C19B2BE7200937732 /* SFVideoPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABAF034B19B2BE7200937732 /* SFVideoPlayerViewController.m */; };
 		ABDD18D919AA999D00A0F31A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ABDD18D819AA999D00A0F31A /* Images.xcassets */; };
 		DD952FCB16E7F5CF00470144 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97E18B1E1624CB5700B17A67 /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
@@ -76,8 +76,6 @@
 		6372FF571613CC47002132AF /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		743D7B6C157DA60100084B67 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		97E18B1E1624CB5700B17A67 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
-		AB42526C180C5166009DA224 /* XCDYouTubeVideoPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCDYouTubeVideoPlayerViewController.h; sourceTree = SOURCE_ROOT; };
-		AB42526D180C5166009DA224 /* XCDYouTubeVideoPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCDYouTubeVideoPlayerViewController.m; sourceTree = SOURCE_ROOT; };
 		AB694842185E63EB00D31103 /* lamp-active.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lamp-active.png"; sourceTree = SOURCE_ROOT; };
 		AB694844185E63F600D31103 /* lamp-active@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lamp-active@2x.png"; sourceTree = SOURCE_ROOT; };
 		AB694845185E63F600D31103 /* lamp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lamp.png; sourceTree = SOURCE_ROOT; };
@@ -122,6 +120,8 @@
 		ABAB76BF18061EE2006689E9 /* SFIntroViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFIntroViewController.m; sourceTree = SOURCE_ROOT; };
 		ABAB76C21807174B006689E9 /* SFDisclaimerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFDisclaimerViewController.h; sourceTree = SOURCE_ROOT; };
 		ABAB76C31807174B006689E9 /* SFDisclaimerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFDisclaimerViewController.m; sourceTree = SOURCE_ROOT; };
+		ABAF034A19B2BE7200937732 /* SFVideoPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFVideoPlayerViewController.h; sourceTree = SOURCE_ROOT; };
+		ABAF034B19B2BE7200937732 /* SFVideoPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFVideoPlayerViewController.m; sourceTree = SOURCE_ROOT; };
 		ABDD18D819AA999D00A0F31A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = "Stretch&Flex/Images.xcassets"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -263,8 +263,8 @@
 				ABAB76BF18061EE2006689E9 /* SFIntroViewController.m */,
 				AB86FB3317FF724700D9637E /* SFVideoListViewController.h */,
 				AB86FB3417FF724700D9637E /* SFVideoListViewController.m */,
-				AB42526C180C5166009DA224 /* XCDYouTubeVideoPlayerViewController.h */,
-				AB42526D180C5166009DA224 /* XCDYouTubeVideoPlayerViewController.m */,
+				ABAF034A19B2BE7200937732 /* SFVideoPlayerViewController.h */,
+				ABAF034B19B2BE7200937732 /* SFVideoPlayerViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -385,7 +385,7 @@
 				AB86FB3517FF724700D9637E /* SFVideoListViewController.m in Sources */,
 				AB86FB0617FF63B200D9637E /* main.m in Sources */,
 				AB8CB973180352940068964B /* Video.m in Sources */,
-				AB42526E180C5166009DA224 /* XCDYouTubeVideoPlayerViewController.m in Sources */,
+				ABAF034C19B2BE7200937732 /* SFVideoPlayerViewController.m in Sources */,
 				AB86FAF617FF634500D9637E /* SFHomeViewController.m in Sources */,
 				ABAB76C018061EE2006689E9 /* SFIntroViewController.m in Sources */,
 				ABAB76C41807174B006689E9 /* SFDisclaimerViewController.m in Sources */,
